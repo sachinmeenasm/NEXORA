@@ -1059,7 +1059,7 @@ Home
 
 </button>
 
-<button onclick="openSection('shorts')">
+<button onclick="openShorts(0)">
 
 <span></span>
 
@@ -1105,15 +1105,11 @@ const isLight =
 
 document.body.classList.contains("light");
 
-localStorage.setItem( "nexora-theme" isLight? "light": "dark"
-
-);
+localStorage.setItem("nexora-theme", isLight ? "light" : "dark");
 
 }
 
 if(localStorage.getItem("nexora-theme") === "light"){
-
-}
 
 document.body.classList.add("light");
 
@@ -1168,9 +1164,185 @@ card.style.transform = "";
 
 });
 
+
+/* ================= SHORTS SYSTEM ================= */
+
+function openShorts(index=0){
+    const modal = document.getElementById("shortsModal");
+    const feed = document.getElementById("shortsFeed");
+    if(!modal || !feed) return;
+
+    modal.classList.add("open");
+    modal.setAttribute("aria-hidden","false");
+    document.body.style.overflow="hidden";
+
+    const items = feed.querySelectorAll(".full-short");
+    if(items[index]){
+        items[index].scrollIntoView({behavior:"instant", block:"start"});
+    }
+}
+
+function closeShorts(){
+    const modal = document.getElementById("shortsModal");
+    if(!modal) return;
+
+    modal.classList.remove("open");
+    modal.setAttribute("aria-hidden","true");
+    document.body.style.overflow="";
+}
+
+function shortLike(button){
+    button.classList.toggle("active");
+    if(button.classList.contains("active")){
+        button.firstChild.textContent="♥";
+    }else{
+        button.firstChild.textContent="♡";
+    }
+}
+
+function shortSave(button){
+    button.classList.toggle("active");
+    alert(
+        button.classList.contains("active")
+        ? "Short saved!"
+        : "Short removed from saved."
+    );
+}
+
+async function shareShort(title){
+    const text = "NEXORA Shorts: " + title;
+
+    if(navigator.share){
+        try{
+            await navigator.share({
+                title:"NEXORA Shorts",
+                text:text,
+                url:window.location.href
+            });
+        }catch(e){}
+    }else{
+        try{
+            await navigator.clipboard.writeText(window.location.href);
+            alert("Short link copied!");
+        }catch(e){
+            alert("Share link: " + window.location.href);
+        }
+    }
+}
+
+document.addEventListener("keydown", function(event){
+    if(event.key === "Escape"){
+        closeShorts();
+    }
+});
+
 </script>
+
+
+<!-- ================= FULL SCREEN SHORTS MODAL ================= -->
+<div class="shorts-modal" id="shortsModal" aria-hidden="true">
+    <div class="shorts-feed" id="shortsFeed">
+
+        <article class="full-short">
+            <div class="full-short-bg">😂</div>
+            <div class="full-short-gradient"></div>
+            <div class="short-topbar">
+                <div class="short-title">🎬 NEXORA Shorts</div>
+                <button class="short-close" onclick="closeShorts()">×</button>
+            </div>
+            <div class="full-short-content">
+                <h2>आज का सबसे funny moment</h2>
+                <p>@NEXORA • #funny #viral</p>
+            </div>
+            <div class="short-side-actions">
+                <button onclick="shortLike(this)">♡<small>12K</small></button>
+                <button onclick="alert('Comment system अगले चरण में database से जुड़ेगा।')">💬<small>430</small></button>
+                <button onclick="shareShort('आज का सबसे funny moment')">↗<small>Share</small></button>
+                <button onclick="shortSave(this)">🔖<small>Save</small></button>
+            </div>
+        </article>
+
+        <article class="full-short">
+            <div class="full-short-bg two">🔥</div>
+            <div class="full-short-gradient"></div>
+            <div class="short-topbar">
+                <div class="short-title">🔥 Trending</div>
+                <button class="short-close" onclick="closeShorts()">×</button>
+            </div>
+            <div class="full-short-content">
+                <h2>यह अभी viral हो रहा है!</h2>
+                <p>@NEXORA • #trending #viral</p>
+            </div>
+            <div class="short-side-actions">
+                <button onclick="shortLike(this)">♡<small>21K</small></button>
+                <button onclick="alert('Comment system अगले चरण में database से जुड़ेगा।')">💬<small>810</small></button>
+                <button onclick="shareShort('यह अभी viral हो रहा है!')">↗<small>Share</small></button>
+                <button onclick="shortSave(this)">🔖<small>Save</small></button>
+            </div>
+        </article>
+
+        <article class="full-short">
+            <div class="full-short-bg three">🤯</div>
+            <div class="full-short-gradient"></div>
+            <div class="short-topbar">
+                <div class="short-title">🧠 Did You Know?</div>
+                <button class="short-close" onclick="closeShorts()">×</button>
+            </div>
+            <div class="full-short-content">
+                <h2>आपको यह पता था?</h2>
+                <p>@NEXORA • #facts #knowledge</p>
+            </div>
+            <div class="short-side-actions">
+                <button onclick="shortLike(this)">♡<small>8K</small></button>
+                <button onclick="alert('Comment system अगले चरण में database से जुड़ेगा।')">💬<small>240</small></button>
+                <button onclick="shareShort('आपको यह पता था?')">↗<small>Share</small></button>
+                <button onclick="shortSave(this)">🔖<small>Save</small></button>
+            </div>
+        </article>
+
+        <article class="full-short">
+            <div class="full-short-bg">🚀</div>
+            <div class="full-short-gradient"></div>
+            <div class="short-topbar">
+                <div class="short-title">🚀 Technology</div>
+                <button class="short-close" onclick="closeShorts()">×</button>
+            </div>
+            <div class="full-short-content">
+                <h2>Future की technology</h2>
+                <p>@NEXORA • #technology #future</p>
+            </div>
+            <div class="short-side-actions">
+                <button onclick="shortLike(this)">♡<small>15K</small></button>
+                <button onclick="alert('Comment system अगले चरण में database से जुड़ेगा।')">💬<small>510</small></button>
+                <button onclick="shareShort('Future की technology')">↗<small>Share</small></button>
+                <button onclick="shortSave(this)">🔖<small>Save</small></button>
+            </div>
+        </article>
+
+        <article class="full-short">
+            <div class="full-short-bg">🎮</div>
+            <div class="full-short-gradient"></div>
+            <div class="short-topbar">
+                <div class="short-title">🎮 Gaming</div>
+                <button class="short-close" onclick="closeShorts()">×</button>
+            </div>
+            <div class="full-short-content">
+                <h2>Gaming का amazing trick</h2>
+                <p>@NEXORA • #gaming #tips</p>
+            </div>
+            <div class="short-side-actions">
+                <button onclick="shortLike(this)">♡<small>32K</small></button>
+                <button onclick="alert('Comment system अगले चरण में database से जुड़ेगा।')">💬<small>1.2K</small></button>
+                <button onclick="shareShort('Gaming का amazing trick')">↗<small>Share</small></button>
+                <button onclick="shortSave(this)">🔖<small>Save</small></button>
+            </div>
+        </article>
+
+    </div>
+</div>
 
 </body>
 
 </html>
 
+    
