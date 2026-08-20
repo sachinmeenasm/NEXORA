@@ -2,1347 +2,410 @@
 <html lang="hi">
 <head>
 <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-<title>NEXORA | AI • News • Shorts • Games • Entertainment</title>
-
-<meta name="description"
-content="NEXORA - AI, News, Shorts, Entertainment, Games और Useful Tools का All-in-One Platform.">
+<meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1">
+<meta name="theme-color" content="#090b12">
+<title>NEXORA — All-in-One Platform</title>
+<meta name="description" content="NEXORA — AI, News, Shorts, Games, Entertainment, Education and Tools.">
 
 <style>
-*{
-    box-sizing:border-box;
-    margin:0;
-    padding:0;
-}
-
-html{
-    scroll-behavior:smooth;
-}
-
-body{
-    font-family:Arial,"Noto Sans Devanagari",sans-serif;
-    background:#0b0d12;
-    color:#fff;
-    min-height:100vh;
-    overflow-x:hidden;
-}
-
-button,
-input{
-    font:inherit;
-}
-
-button{
-    cursor:pointer;
-    border:0;
-}
-
-/* ================= HEADER ================= */
-
-.header{
-    position:sticky;
-    top:0;
-    z-index:1000;
-    width:100%;
-    backdrop-filter:blur(18px);
-    background:rgba(11,13,18,.88);
-    border-bottom:1px solid rgba(255,255,255,.08);
-}
-
-.header-inner{
-    max-width:1400px;
-    margin:auto;
-    height:70px;
-    display:flex;
-    align-items:center;
-    gap:22px;
-    padding:0 20px;
-}
-
-.logo{
-    font-size:26px;
-    font-weight:900;
-    letter-spacing:-1px;
-    white-space:nowrap;
-}
-
-.logo span{
-    background:linear-gradient(90deg,#7c3cff,#00d9ff);
-    -webkit-background-clip:text;
-    background-clip:text;
-    color:transparent;
-}
-
-.search-box{
-    flex:1;
-    max-width:600px;
-    margin:auto;
-    position:relative;
-}
-
-.search-box input{
-    width:100%;
-    height:44px;
-    border-radius:25px;
-    border:1px solid rgba(255,255,255,.1);
-    outline:none;
-    padding:0 50px 0 18px;
-    background:#171a22;
-    color:#fff;
-}
-
-.search-box button{
-    position:absolute;
-    right:5px;
-    top:5px;
-    width:34px;
-    height:34px;
-    border-radius:50%;
-    background:#7c3cff;
-    color:white;
-}
-
-.header-actions{
-    display:flex;
-    gap:9px;
-}
-
-.icon-btn{
-    width:42px;
-    height:42px;
-    border-radius:50%;
-    background:#171a22;
-    color:#fff;
-    border:1px solid rgba(255,255,255,.08);
-}
-
-.icon-btn:hover{
-    background:#7c3cff;
-}
-
-/* ================= MAIN ================= */
-
-.container{
-    width:min(1400px,94%);
-    margin:auto;
-}
-
-/* ================= HERO ================= */
-
-.hero{
-    margin-top:25px;
-    min-height:420px;
-    border-radius:30px;
-    position:relative;
-    overflow:hidden;
-    padding:55px;
-    display:flex;
-    align-items:center;
-    background:
-      radial-gradient(circle at 80% 20%,rgba(0,217,255,.35),transparent 30%),
-      radial-gradient(circle at 20% 80%,rgba(124,60,255,.4),transparent 35%),
-      linear-gradient(135deg,#151829,#090b10);
-    border:1px solid rgba(255,255,255,.08);
-}
-
-.hero-content{
-    max-width:700px;
-    position:relative;
-    z-index:2;
-}
-
-.badge{
-    display:inline-block;
-    padding:8px 14px;
-    border-radius:20px;
-    background:rgba(124,60,255,.2);
-    border:1px solid rgba(124,60,255,.5);
-    color:#cdb8ff;
-    margin-bottom:18px;
-    font-size:14px;
-}
-
-.hero h1{
-    font-size:clamp(40px,6vw,75px);
-    line-height:.98;
-    margin-bottom:20px;
-}
-
-.hero h1 span{
-    background:linear-gradient(90deg,#8b5cff,#00e5ff);
-    -webkit-background-clip:text;
-    background-clip:text;
-    color:transparent;
-}
-
-.hero p{
-    color:#b9becb;
-    font-size:18px;
-    line-height:1.6;
-    max-width:650px;
-}
-
-.hero-buttons{
-    display:flex;
-    gap:12px;
-    margin-top:28px;
-    flex-wrap:wrap;
-}
-
-.primary-btn,
-.secondary-btn{
-    padding:13px 22px;
-    border-radius:25px;
-    font-weight:bold;
-}
-
-.primary-btn{
-    background:linear-gradient(90deg,#7c3cff,#00bde8);
-    color:#fff;
-}
-
-.secondary-btn{
-    background:#191c25;
-    color:#fff;
-    border:1px solid rgba(255,255,255,.1);
-}
-
-.primary-btn:hover,
-.secondary-btn:hover{
-    transform:translateY(-2px);
-}
-
-/* ================= SECTION ================= */
-
-.section{
-    padding:38px 0 5px;
-}
-
-.section-title{
-    display:flex;
-    align-items:center;
-    justify-content:space-between;
-    margin-bottom:18px;
-}
-
-.section-title h2{
-    font-size:25px;
-}
-
-.view-all{
-    color:#a98aff;
-    font-size:14px;
-}
-
-/* ================= CATEGORY ================= */
-
-.category-grid{
-    display:grid;
-    grid-template-columns:repeat(8,1fr);
-    gap:12px;
-}
-
-.category{
-    min-height:100px;
-    border-radius:18px;
-    background:#151820;
-    border:1px solid rgba(255,255,255,.07);
-    display:flex;
-    flex-direction:column;
-    justify-content:center;
-    align-items:center;
-    gap:8px;
-    transition:.25s;
-}
-
-.category:hover{
-    transform:translateY(-5px);
-    border-color:#7c3cff;
-    background:#1a1d28;
-}
+:root{
+  --bg:#070910;--panel:#10131d;--panel2:#151925;--text:#f7f8ff;--muted:#9ba3b5;
+  --line:rgba(255,255,255,.09);--purple:#7c3cff;--cyan:#08cfff;--pink:#ff3f9d;
+  --grad:linear-gradient(100deg,#7c3cff,#08cfff);
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{font-family:Arial,"Noto Sans Devanagari",sans-serif;background:radial-gradient(circle at 50% -10%,#17172e 0,#070910 42%);color:var(--text);min-height:100vh;overflow-x:hidden}
+button,input{font:inherit}
+button{border:0;cursor:pointer;color:inherit}
+a{text-decoration:none;color:inherit}
+.hidden{display:none!important}
+
+/* HEADER */
+.header{position:sticky;top:0;z-index:1000;background:rgba(7,9,16,.82);backdrop-filter:blur(18px);border-bottom:1px solid var(--line)}
+.header-inner{height:72px;max-width:1500px;margin:auto;padding:0 24px;display:flex;align-items:center;gap:24px}
+.logo{font-size:31px;font-weight:900;letter-spacing:-1.5px;background:var(--grad);-webkit-background-clip:text;background-clip:text;color:transparent;white-space:nowrap}
+.search{position:relative;flex:1;max-width:620px;margin:auto}
+.search input{width:100%;height:46px;border-radius:28px;border:1px solid var(--line);background:#11141d;color:#fff;padding:0 55px 0 20px;outline:none}
+.search button{position:absolute;right:5px;top:5px;width:36px;height:36px;border-radius:50%;background:var(--grad)}
+.header-actions{display:flex;gap:9px}
+.icon{width:42px;height:42px;border-radius:50%;background:#11141d;border:1px solid var(--line)}
+.icon:hover{border-color:#8f69ff;transform:translateY(-1px)}
+.badge-dot{position:relative}
+.badge-dot:after{content:"3";position:absolute;right:-2px;top:-2px;background:#813dff;color:#fff;font-size:10px;min-width:17px;height:17px;border-radius:50%;display:grid;place-items:center}
+
+/* LAYOUT */
+.wrap{max-width:1500px;margin:auto;padding:0 24px 100px}
+.hero{min-height:430px;display:grid;grid-template-columns:1fr 1fr;align-items:center;gap:20px;padding:40px 30px;border-bottom:1px solid var(--line);overflow:hidden}
+.hero-copy{max-width:700px}
+.pill{display:inline-flex;gap:7px;padding:8px 12px;border-radius:20px;background:rgba(124,60,255,.13);border:1px solid rgba(124,60,255,.3);color:#d7c8ff;font-size:13px;margin-bottom:17px}
+.hero h1{font-size:clamp(42px,6vw,82px);line-height:.94;margin-bottom:20px}
+.gradient{background:var(--grad);-webkit-background-clip:text;background-clip:text;color:transparent}
+.hero p{font-size:18px;color:#c0c5d2;line-height:1.55;max-width:620px}
+.actions{display:flex;gap:12px;flex-wrap:wrap;margin:25px 0}
+.primary,.secondary{padding:13px 21px;border-radius:12px;font-weight:800}
+.primary{background:var(--grad)}
+.secondary{background:#11141d;border:1px solid #5b4b91}
+.stats{display:flex;gap:34px;flex-wrap:wrap;color:#cfd4df}
+.stat strong{display:block;font-size:21px;color:#fff}.stat span{font-size:12px;color:var(--muted)}
+.hero-art{min-height:390px;display:grid;place-items:center;position:relative}
+.orbit{width:340px;height:340px;border-radius:50%;border:2px solid rgba(124,60,255,.45);box-shadow:0 0 80px rgba(124,60,255,.18),inset 0 0 80px rgba(0,207,255,.08);display:grid;place-items:center;position:relative}
+.robot{font-size:135px;filter:drop-shadow(0 0 24px #5d35ff)}
+.float{position:absolute;padding:12px 14px;border-radius:14px;background:#15192a;border:1px solid #6c55b2;box-shadow:0 0 30px rgba(124,60,255,.2);font-size:24px}
+.f1{top:12%;left:7%}.f2{top:9%;right:8%}.f3{bottom:20%;left:3%}.f4{bottom:13%;right:6%}
+
+/* SECTIONS */
+.section{padding:30px 0 0}
+.section-head{display:flex;align-items:center;justify-content:space-between;margin-bottom:15px}
+.section-head h2{font-size:24px}.view{color:#b68cff;font-weight:700;background:none}
+.grid8{display:grid;grid-template-columns:repeat(8,1fr);gap:10px}
+.category{min-height:105px;background:linear-gradient(145deg,#121622,#0d1018);border:1px solid var(--line);border-radius:14px;display:grid;place-items:center;text-align:center;padding:12px;transition:.2s}
+.category:hover{transform:translateY(-4px);border-color:#7756cf}.category b{display:block;margin-top:7px;font-size:13px}.cat-icon{font-size:35px}
+
+/* CARDS */
+.card-grid{display:grid;grid-template-columns:repeat(5,1fr);gap:12px}
+.card{background:linear-gradient(145deg,#121621,#0d1018);border:1px solid var(--line);border-radius:14px;overflow:hidden;transition:.2s;cursor:pointer}
+.card:hover{transform:translateY(-4px);border-color:#6d55b7}
+.thumb{height:155px;display:grid;place-items:center;font-size:70px;background:linear-gradient(145deg,#19213b,#10121b)}
+.card-body{padding:12px}.card-body h3{font-size:15px;margin-bottom:7px}.card-body p{font-size:12px;color:var(--muted);line-height:1.45}
+.meta{display:flex;justify-content:space-between;margin-top:10px;color:#858da0;font-size:11px}
+
+/* AI */
+.ai-grid,.tool-grid{display:grid;grid-template-columns:repeat(6,1fr);gap:10px}
+.ai-card,.tool-card{background:#11151f;border:1px solid var(--line);border-radius:13px;padding:17px;cursor:pointer;transition:.2s}
+.ai-card:hover,.tool-card:hover{border-color:#7555c6;transform:translateY(-3px)}
+.ai-card span,.tool-card span{font-size:28px}.ai-card h3,.tool-card h3{font-size:14px;margin-top:9px}.ai-card p{font-size:11px;color:var(--muted);margin-top:4px}
+
+/* GAMES */
+.game-grid{display:grid;grid-template-columns:repeat(6,1fr);gap:12px}
+.game .thumb{height:135px}.game .card-body{text-align:center}
+
+/* MODAL */
+.modal{position:fixed;inset:0;z-index:5000;background:rgba(0,0,0,.75);backdrop-filter:blur(10px);display:none;align-items:center;justify-content:center;padding:15px}
+.modal.open{display:flex}
+.modal-box{width:min(760px,100%);max-height:92vh;overflow:auto;background:#10131d;border:1px solid #38304e;border-radius:20px;box-shadow:0 20px 80px rgba(0,0,0,.5)}
+.modal-head{position:sticky;top:0;background:#10131d;border-bottom:1px solid var(--line);padding:15px 18px;display:flex;justify-content:space-between;align-items:center;z-index:2}
+.close{width:38px;height:38px;border-radius:50%;background:#1b1f2b}.modal-body{padding:20px}
+.input,.textarea{width:100%;background:#0b0e15;border:1px solid var(--line);border-radius:12px;color:#fff;padding:12px;outline:none}.textarea{min-height:110px;resize:vertical}
+.form-row{display:grid;grid-template-columns:1fr 1fr;gap:10px}.mt{margin-top:12px}
+
+/* AI CHAT */
+.chat{display:flex;flex-direction:column;gap:10px;min-height:300px}.msg{max-width:85%;padding:11px 13px;border-radius:14px;line-height:1.45;font-size:14px}.bot{background:#171c29;align-self:flex-start}.user{background:#6d3cf0;align-self:flex-end}.chatbar{display:flex;gap:8px;margin-top:12px}
+
+/* SHORTS */
+.shorts-modal{position:fixed;inset:0;z-index:6000;background:#000;display:none}
+.shorts-modal.open{display:block}
+.shorts-feed{height:100%;width:min(520px,100%);margin:auto;overflow-y:auto;scroll-snap-type:y mandatory;scrollbar-width:none}
+.shorts-feed::-webkit-scrollbar{display:none}
+.short{height:100dvh;min-height:560px;position:relative;scroll-snap-align:start;overflow:hidden;background:#080a10}
+.short-bg{position:absolute;inset:0;display:grid;place-items:center;font-size:130px;background:radial-gradient(circle at 70% 20%,rgba(0,207,255,.25),transparent 30%),radial-gradient(circle at 20% 70%,rgba(124,60,255,.35),transparent 35%),linear-gradient(145deg,#15132a,#070910)}
+.short-bg.two{background:radial-gradient(circle at 20% 20%,rgba(255,63,157,.3),transparent 30%),linear-gradient(145deg,#30152b,#070910)}
+.short-bg.three{background:radial-gradient(circle at 80% 40%,rgba(0,255,180,.25),transparent 30%),linear-gradient(145deg,#102b2a,#070910)}
+.short:after{content:"";position:absolute;inset:0;background:linear-gradient(transparent 35%,rgba(0,0,0,.9))}
+.short-top{position:absolute;top:0;left:0;right:0;z-index:2;padding:17px;display:flex;justify-content:space-between}
+.short-content{position:absolute;left:17px;right:75px;bottom:25px;z-index:2}.short-content h2{font-size:21px;margin-bottom:7px}.short-content p{font-size:13px;color:#ddd}
+.side{position:absolute;right:12px;bottom:25px;z-index:3;display:flex;flex-direction:column;gap:11px}.side button{width:48px;height:48px;border-radius:50%;background:rgba(0,0,0,.55);font-size:20px}.side small{display:block;font-size:9px}
+.short-close{width:40px;height:40px;border-radius:50%;background:rgba(0,0,0,.5);color:#fff;font-size:22px}
+
+/* NEWS */
+.news-list{display:grid;gap:10px}.news-item{display:flex;gap:13px;background:#11151f;border:1px solid var(--line);padding:11px;border-radius:13px;cursor:pointer}.news-pic{width:100px;height:70px;border-radius:9px;background:linear-gradient(145deg,#202c50,#10131b);display:grid;place-items:center;font-size:35px;flex:none}.news-item h3{font-size:15px}.news-item p{font-size:12px;color:var(--muted);margin-top:5px}
 
-.category-icon{
-    font-size:30px;
-}
-
-/* ================= CARDS ================= */
-
-.card-grid{
-    display:grid;
-    grid-template-columns:repeat(4,1fr);
-    gap:16px;
-}
-
-.card{
-    background:#151820;
-    border:1px solid rgba(255,255,255,.07);
-    border-radius:20px;
-    overflow:hidden;
-    transition:.25s;
-}
-
-.card:hover{
-    transform:translateY(-5px);
-    border-color:rgba(124,60,255,.6);
-}
-
-.card-image{
-    height:180px;
-    display:flex;
-    align-items:center;
-    justify-content:center;
-    font-size:55px;
-    background:
-      linear-gradient(135deg,#24213d,#11151e);
-}
-
-.card-body{
-    padding:15px;
-}
-
-.card-body h3{
-    font-size:17px;
-    margin-bottom:7px;
-}
-
-.card-body p{
-    color:#9097a6;
-    font-size:13px;
-    line-height:1.5;
-}
-
-.card-meta{
-    display:flex;
-    justify-content:space-between;
-    margin-top:13px;
-    color:#858c9a;
-    font-size:12px;
-}
-
-/* ================= AI ================= */
-
-.ai-box{
-    padding:25px;
-    border-radius:25px;
-    background:
-      radial-gradient(circle at 90% 10%,rgba(0,217,255,.15),transparent 30%),
-      linear-gradient(135deg,#161a27,#11131a);
-    border:1px solid rgba(255,255,255,.08);
-}
-
-.ai-grid{
-    display:grid;
-    grid-template-columns:repeat(4,1fr);
-    gap:12px;
-    margin-top:18px;
-}
-
-.ai-card{
-    background:#1b1e28;
-    padding:18px;
-    border-radius:16px;
-    border:1px solid rgba(255,255,255,.06);
-}
-
-.ai-card span{
-    font-size:27px;
-}
-
-.ai-card h3{
-    margin-top:10px;
-    font-size:15px;
-}
-
-.ai-card p{
-    color:#8e95a4;
-    font-size:12px;
-    margin-top:5px;
-}
-
-/* ================= SHORTS ================= */
-
-.shorts-grid{
-    display:grid;
-    grid-template-columns:repeat(5,1fr);
-    gap:14px;
-}
-
-.short-card{
-    height:310px;
-    border-radius:20px;
-    overflow:hidden;
-    position:relative;
-    background:linear-gradient(160deg,#32205b,#0f1720);
-    border:1px solid rgba(255,255,255,.08);
-}
+/* GAMES MODAL */
+.game-board{text-align:center}.game-score{font-size:30px;font-weight:900;margin:8px}.game-grid-board{display:grid;grid-template-columns:repeat(3,80px);gap:8px;justify-content:center;margin:18px auto}.cell{width:80px;height:80px;background:#191e2a;border:1px solid var(--line);border-radius:12px;font-size:35px}.quiz-option{display:block;width:100%;text-align:left;background:#171c27;padding:12px;border:1px solid var(--line);border-radius:10px;margin-top:8px}
 
-.short-visual{
-    height:100%;
-    display:flex;
-    align-items:center;
-    justify-content:center;
-    font-size:65px;
-}
-
-.short-info{
-    position:absolute;
-    bottom:0;
-    left:0;
-    right:0;
-    padding:15px;
-    background:linear-gradient(transparent,rgba(0,0,0,.9));
-}
-
-.short-info h3{
-    font-size:15px;
-}
-
-.short-info p{
-    margin-top:5px;
-    font-size:12px;
-    color:#bbb;
-}
-
-/* ================= TOOLS ================= */
-
-.tools-grid{
-    display:grid;
-    grid-template-columns:repeat(6,1fr);
-    gap:12px;
-}
-
-.tool{
-    background:#151820;
-    padding:20px 10px;
-    border-radius:17px;
-    text-align:center;
-    border:1px solid rgba(255,255,255,.06);
-}
-
-.tool div{
-    font-size:28px;
-    margin-bottom:8px;
-}
-
-.tool span{
-    font-size:13px;
-}
-
-/* ================= FOOTER ================= */
-
-.footer{
-    margin-top:50px;
-    padding:35px 20px 100px;
-    text-align:center;
-    color:#777e8c;
-    border-top:1px solid rgba(255,255,255,.07);
-}
-
-.footer strong{
-    color:#fff;
-}
-
-/* ================= BOTTOM NAV ================= */
-
-.bottom-nav{
-    display:none;
-}
-
-/* ================= LIGHT MODE ================= */
-
-body.light{
-    background:#f4f6fa;
-    color:#151820;
-}
+/* TOAST */
+.toast{position:fixed;left:50%;bottom:90px;transform:translateX(-50%) translateY(20px);background:#171b27;border:1px solid #4c3b77;padding:11px 15px;border-radius:12px;opacity:0;pointer-events:none;transition:.25s;z-index:9000}.toast.show{opacity:1;transform:translateX(-50%) translateY(0)}
 
-body.light .header{
-    background:rgba(255,255,255,.9);
-    border-bottom:1px solid #ddd;
-}
-
-body.light .search-box input,
-body.light .icon-btn,
-body.light .category,
-body.light .card,
-body.light .ai-card,
-body.light .tool{
-    background:#fff;
-    color:#222;
-}
-
-body.light .search-box input{
-    border-color:#ddd;
-}
-
-body.light .hero{
-    color:#fff;
-}
-
-body.light .card-body p,
-body.light .ai-card p{
-    color:#666;
-}
+/* BOTTOM NAV */
+.bottom{position:fixed;left:0;right:0;bottom:0;height:68px;z-index:3000;background:rgba(10,12,18,.94);backdrop-filter:blur(15px);border-top:1px solid var(--line);display:none;justify-content:space-around;align-items:center}
+.bottom button{background:none;color:#9199aa;font-size:10px;display:flex;flex-direction:column;align-items:center;gap:4px}.bottom span{font-size:21px}.bottom .active{color:#a36cff}
 
-/* ================= RESPONSIVE ================= */
+/* LIGHT */
+body.light{--bg:#f5f7fb;--panel:#fff;--panel2:#f0f2f7;--text:#151822;--muted:#697184;--line:rgba(20,25,40,.12);background:#f5f7fb;color:#151822}
+body.light .header{background:rgba(255,255,255,.88)}body.light .search input,body.light .icon,body.light .category,body.light .card,body.light .ai-card,body.light .tool-card,body.light .modal-box,body.light .modal-head,body.light .news-item{background:#fff;color:#151822}body.light .search input{color:#151822}body.light .input,body.light .textarea{background:#f5f7fb;color:#151822}
 
+/* RESPONSIVE */
 @media(max-width:1100px){
-
-    .category-grid{
-        grid-template-columns:repeat(4,1fr);
-    }
-
-    .card-grid{
-        grid-template-columns:repeat(2,1fr);
-    }
-
-    .shorts-grid{
-        grid-template-columns:repeat(3,1fr);
-    }
-
-    .tools-grid{
-        grid-template-columns:repeat(4,1fr);
-    }
-
-    .ai-grid{
-        grid-template-columns:repeat(2,1fr);
-    }
+  .grid8{grid-template-columns:repeat(4,1fr)}.card-grid{grid-template-columns:repeat(3,1fr)}.ai-grid,.tool-grid{grid-template-columns:repeat(3,1fr)}.game-grid{grid-template-columns:repeat(3,1fr)}
 }
-
 @media(max-width:700px){
-
-    .header-inner{
-        height:62px;
-        padding:0 12px;
-        gap:10px;
-    }
-
-    .logo{
-        font-size:21px;
-    }
-
-    .header-actions{
-        display:none;
-    }
-
-    .search-box{
-        max-width:none;
-    }
-
-    .hero{
-        min-height:400px;
-        padding:30px 22px;
-        border-radius:24px;
-    }
-
-    .hero p{
-        font-size:15px;
-    }
-
-    .section{
-        padding-top:28px;
-    }
-
-    .category-grid{
-        grid-template-columns:repeat(4,1fr);
-        gap:8px;
-    }
-
-    .category{
-        min-height:82px;
-        font-size:11px;
-    }
-
-    .category-icon{
-        font-size:24px;
-    }
-
-    .card-grid{
-        grid-template-columns:repeat(2,1fr);
-        gap:10px;
-    }
-
-    .card-image{
-        height:130px;
-        font-size:42px;
-    }
-
-    .card-body{
-        padding:11px;
-    }
-
-    .card-body h3{
-        font-size:14px;
-    }
-
-    .shorts-grid{
-        display:flex;
-        overflow-x:auto;
-        scroll-snap-type:x mandatory;
-        padding-bottom:5px;
-    }
-
-    .short-card{
-        min-width:190px;
-        height:300px;
-        scroll-snap-align:start;
-    }
-
-    .tools-grid{
-        grid-template-columns:repeat(3,1fr);
-        gap:8px;
-    }
-
-    .tool{
-        padding:15px 5px;
-    }
-
-    .ai-grid{
-        grid-template-columns:repeat(2,1fr);
-    }
-
-    .bottom-nav{
-        display:flex;
-        position:fixed;
-        bottom:0;
-        left:0;
-        right:0;
-        height:65px;
-        z-index:2000;
-        background:rgba(15,17,23,.95);
-        backdrop-filter:blur(15px);
-        border-top:1px solid rgba(255,255,255,.1);
-        justify-content:space-around;
-        align-items:center;
-    }
-
-    .bottom-nav button{
-        background:none;
-        color:#969daa;
-        font-size:11px;
-        display:flex;
-        flex-direction:column;
-        align-items:center;
-        gap:4px;
-    }
-
-    .bottom-nav button span{
-        font-size:21px;
-    }
-
-    .bottom-nav button.active{
-        color:#9b78ff;
-    }
+  .header-inner{height:62px;padding:0 12px;gap:9px}.logo{font-size:22px}.header-actions{display:none}.wrap{padding:0 12px 85px}.hero{grid-template-columns:1fr;padding:28px 10px;min-height:500px}.hero-art{min-height:250px;order:-1}.orbit{width:245px;height:245px}.robot{font-size:92px}.float{font-size:19px;padding:9px}.hero h1{font-size:49px}.hero p{font-size:15px}.stats{gap:18px}.grid8{grid-template-columns:repeat(4,1fr);gap:7px}.category{min-height:82px;padding:7px}.cat-icon{font-size:26px}.category b{font-size:10px}.card-grid{display:flex;overflow-x:auto;scroll-snap-type:x mandatory}.card-grid .card{min-width:210px;scroll-snap-align:start}.ai-grid,.tool-grid{grid-template-columns:repeat(2,1fr)}.game-grid{grid-template-columns:repeat(2,1fr)}.bottom{display:flex}.section{padding-top:25px}.section-head h2{font-size:20px}.form-row{grid-template-columns:1fr}
 }
 </style>
 </head>
 
 <body>
 
-<!-- HEADER -->
-
 <header class="header">
-    <div class="header-inner">
-
-        <div class="logo">
-            <span>NEXORA</span>
-        </div>
-
-        <div class="search-box">
-            <input
-                type="search"
-                id="searchInput"
-                placeholder="Search anything..."
-                onkeyup="searchSite(event)"
-            >
-            <button onclick="searchSite()">⌕</button>
-        </div>
-
-        <div class="header-actions">
-            <button class="icon-btn" onclick="toggleTheme()">☀️</button>
-            <button class="icon-btn">🔔</button>
-            <button class="icon-btn">👤</button>
-        </div>
-
+  <div class="header-inner">
+    <button class="logo" onclick="goHome()">NEXORA</button>
+    <div class="search">
+      <input id="searchInput" type="search" placeholder="Search anything..." onkeydown="if(event.key==='Enter')runSearch()">
+      <button onclick="runSearch()">⌕</button>
     </div>
+    <div class="header-actions">
+      <button class="icon" onclick="toggleTheme()">☾</button>
+      <button class="icon badge-dot" onclick="openNotifications()">🔔</button>
+      <button class="icon" onclick="openProfile()">👤</button>
+    </div>
+  </div>
 </header>
 
-
-<main class="container">
-
-<!-- HERO -->
+<main class="wrap" id="home">
 
 <section class="hero">
-
-    <div class="hero-content">
-
-        <div class="badge">🚀 THE NEXT GENERATION PLATFORM</div>
-
-        <h1>
-            Everything You Love.
-            <span>One Place.</span>
-        </h1>
-
-        <p>
-            AI, News, Shorts, Entertainment, Games और
-            powerful daily tools — सब कुछ एक ही जगह।
-        </p>
-
-        <div class="hero-buttons">
-
-            <button class="primary-btn"
-                    onclick="openSection('ai')">
-                🤖 Try AI
-            </button>
-
-            <button class="secondary-btn"
-                    onclick="openSection('shorts')">
-                ▶ Watch Shorts
-            </button>
-
-        </div>
-
+  <div class="hero-copy">
+    <div class="pill">🚀 All-in-One Platform</div>
+    <h1>Welcome to<br><span class="gradient">NEXORA</span></h1>
+    <p>AI Tools, Latest News, Viral Shorts, Exciting Games, Entertainment & Useful Tools — सब कुछ एक जगह!</p>
+    <div class="actions">
+      <button class="primary" onclick="openExplore()">Explore Now →</button>
+      <button class="secondary" onclick="openAbout()">Learn More</button>
     </div>
-
+    <div class="stats">
+      <div class="stat"><strong>50K+</strong><span>Users</span></div>
+      <div class="stat"><strong>100+</strong><span>AI Tools</span></div>
+      <div class="stat"><strong>1M+</strong><span>Shorts Views</span></div>
+      <div class="stat"><strong>24/7</strong><span>Updates</span></div>
+    </div>
+  </div>
+  <div class="hero-art">
+    <div class="orbit"><div class="robot">🤖</div></div>
+    <div class="float f1">🧠</div><div class="float f2">📰</div><div class="float f3">🛠️</div><div class="float f4">🎮</div>
+  </div>
 </section>
 
-
-<!-- CATEGORIES -->
-
-<section class="section">
-
-    <div class="section-title">
-        <h2>Explore NEXORA</h2>
-        <span class="view-all">View All →</span>
-    </div>
-
-    <div class="category-grid">
-
-        <div class="category" onclick="openSection('ai')">
-            <div class="category-icon">🤖</div>
-            AI
-        </div>
-
-        <div class="category" onclick="openSection('news')">
-            <div class="category-icon">📰</div>
-            News
-        </div>
-
-        <div class="category" onclick="openSection('shorts')">
-            <div class="category-icon">🎬</div>
-            Shorts
-        </div>
-
-        <div class="category">
-            <div class="category-icon">🎥</div>
-            Videos
-        </div>
-
-        <div class="category">
-            <div class="category-icon">🎮</div>
-            Games
-        </div>
-
-        <div class="category">
-            <div class="category-icon">😂</div>
-            Fun
-        </div>
-
-        <div class="category">
-            <div class="category-icon">🛠️</div>
-            Tools
-        </div>
-
-        <div class="category">
-            <div class="category-icon">🔥</div>
-            Trending
-        </div>
-
-    </div>
-
+<section class="section" id="categories">
+  <div class="section-head"><h2>Explore Categories</h2><button class="view" onclick="openExplore()">View All →</button></div>
+  <div class="grid8">
+    <button class="category" onclick="openAI()"><div class="cat-icon">🤖</div><b>AI Tools</b></button>
+    <button class="category" onclick="openNews()"><div class="cat-icon">📰</div><b>News</b></button>
+    <button class="category" onclick="openShorts(0)"><div class="cat-icon">▶️</div><b>Shorts</b></button>
+    <button class="category" onclick="openGames()"><div class="cat-icon">🎮</div><b>Games</b></button>
+    <button class="category" onclick="showToast('Entertainment section opened')"><div class="cat-icon">🍿</div><b>Entertainment</b></button>
+    <button class="category" onclick="openTools()"><div class="cat-icon">🛠️</div><b>Tools</b></button>
+    <button class="category" onclick="showToast('Education hub opened')"><div class="cat-icon">🎓</div><b>Education</b></button>
+    <button class="category" onclick="openExplore()"><div class="cat-icon">▦</div><b>More</b></button>
+  </div>
 </section>
 
-
-<!-- TRENDING -->
-
-<section class="section" id="news">
-
-    <div class="section-title">
-        <h2>🔥 Trending Now</h2>
-        <span class="view-all">See All →</span>
-    </div>
-
-    <div class="card-grid">
-
-        <article class="card">
-            <div class="card-image">🌎</div>
-            <div class="card-body">
-                <h3>आज की सबसे बड़ी खबरें</h3>
-                <p>Latest और trending news एक ही जगह।</p>
-                <div class="card-meta">
-                    <span>📰 News</span>
-                    <span>2.4K views</span>
-                </div>
-            </div>
-        </article>
-
-        <article class="card">
-            <div class="card-image">📱</div>
-            <div class="card-body">
-                <h3>Technology की नई दुनिया</h3>
-                <p>Technology और AI की latest जानकारी।</p>
-                <div class="card-meta">
-                    <span>💻 Tech</span>
-                    <span>1.8K views</span>
-                </div>
-            </div>
-        </article>
-
-        <article class="card">
-            <div class="card-image">🏆</div>
-            <div class="card-body">
-                <h3>आज का Trending Topic</h3>
-                <p>लोग आज क्या सबसे ज्यादा देख रहे हैं?</p>
-                <div class="card-meta">
-                    <span>🔥 Trending</span>
-                    <span>3.1K views</span>
-                </div>
-            </div>
-        </article>
-
-        <article class="card">
-            <div class="card-image">🚀</div>
-            <div class="card-body">
-                <h3>Future Technology</h3>
-                <p>भविष्य की technology के बारे में जानें।</p>
-                <div class="card-meta">
-                    <span>🤖 AI</span>
-                    <span>4.2K views</span>
-                </div>
-            </div>
-        </article>
-
-    </div>
-
+<section class="section" id="shortsSection">
+  <div class="section-head"><h2>🔥 Trending Shorts</h2><button class="view" onclick="openShorts(0)">View All →</button></div>
+  <div class="card-grid">
+    <article class="card" onclick="openShorts(0)"><div class="thumb">😂</div><div class="card-body"><h3>आज का सबसे funny moment 😂</h3><div class="meta"><span>▶ 1.2M</span><span>Short</span></div></div></article>
+    <article class="card" onclick="openShorts(1)"><div class="thumb">😲</div><div class="card-body"><h3>यह अभी viral हो रहा है! #viral</h3><div class="meta"><span>▶ 890K</span><span>Short</span></div></div></article>
+    <article class="card" onclick="openShorts(2)"><div class="thumb">🌍</div><div class="card-body"><h3>आपको यह पता था? #facts</h3><div class="meta"><span>▶ 620K</span><span>Short</span></div></div></article>
+    <article class="card" onclick="openShorts(3)"><div class="thumb">🚘</div><div class="card-body"><h3>Future की technology देखो! 🤯</h3><div class="meta"><span>▶ 1.5M</span><span>Short</span></div></div></article>
+    <article class="card" onclick="openShorts(4)"><div class="thumb">🎮</div><div class="card-body"><h3>Insane Gaming Moment! 🎮</h3><div class="meta"><span>▶ 980K</span><span>Short</span></div></div></article>
+  </div>
 </section>
 
-
-<!-- AI -->
-
-<section class="section" id="ai">
-
-    <div class="ai-box">
-
-        <div class="section-title">
-            <h2>🤖 NEXORA AI</h2>
-            <span class="view-all">AI Hub →</span>
-        </div>
-
-        <p style="color:#9da4b3;">
-            सवाल पूछें, लिखें, सीखें, translate करें और
-            अपने काम को आसान बनाएं।
-        </p>
-
-        <div class="ai-grid">
-
-            <div class="ai-card">
-                <span>💬</span>
-                <h3>AI Chat</h3>
-                <p>अपने सवालों के जवाब पाएं।</p>
-            </div>
-
-            <div class="ai-card">
-                <span>✍️</span>
-                <h3>AI Writer</h3>
-                <p>Articles और content लिखें।</p>
-            </div>
-
-            <div class="ai-card">
-                <span>🌐</span>
-                <h3>Translator</h3>
-                <p>भाषाओं का translation करें।</p>
-            </div>
-
-            <div class="ai-card">
-                <span>📚</span>
-                <h3>Study AI</h3>
-                <p>पढ़ाई में AI की मदद लें।</p>
-            </div>
-
-        </div>
-
-    </div>
-
+<section class="section" id="newsSection">
+  <div class="section-head"><h2>📰 Latest News</h2><button class="view" onclick="openNews()">View All →</button></div>
+  <div class="card-grid">
+    <article class="card" onclick="openNewsArticle('संसद का विशेष सत्र आज से शुरू')"><div class="thumb">🏛️</div><div class="card-body"><h3>संसद का विशेष सत्र आज से शुरू</h3><div class="meta"><span>2 hours ago</span><span>News</span></div></div></article>
+    <article class="card" onclick="openNewsArticle('ISRO ने लॉन्च किया नया सैटेलाइट')"><div class="thumb">🚀</div><div class="card-body"><h3>ISRO ने लॉन्च किया नया सैटेलाइट</h3><div class="meta"><span>3 hours ago</span><span>Science</span></div></div></article>
+    <article class="card" onclick="openNewsArticle('भारत ने जीता शानदार मैच')"><div class="thumb">🏏</div><div class="card-body"><h3>भारत ने जीता शानदार मैच</h3><div class="meta"><span>5 hours ago</span><span>Sports</span></div></div></article>
+    <article class="card" onclick="openNewsArticle('शेयर बाजार में तेजी')"><div class="thumb">📈</div><div class="card-body"><h3>शेयर बाजार में तेजी, निवेशक खुश</h3><div class="meta"><span>6 hours ago</span><span>Business</span></div></div></article>
+    <article class="card" onclick="openNewsArticle('नई स्मार्टफोन सीरीज हुई लॉन्च')"><div class="thumb">📱</div><div class="card-body"><h3>नई स्मार्टफोन सीरीज हुई लॉन्च</h3><div class="meta"><span>7 hours ago</span><span>Tech</span></div></div></article>
+  </div>
 </section>
 
-
-<!-- SHORTS -->
-
-<section class="section" id="shorts">
-
-    <div class="section-title">
-        <h2>🎬 Trending Shorts</h2>
-        <span class="view-all">Watch All →</span>
-    </div>
-
-    <div class="shorts-grid">
-
-        <div class="short-card">
-            <div class="short-visual">😂</div>
-            <div class="short-info">
-                <h3>आज का सबसे funny moment</h3>
-                <p>❤️ 12K · 💬 430</p>
-            </div>
-        </div>
-
-        <div class="short-card">
-            <div class="short-visual">🔥</div>
-            <div class="short-info">
-                <h3>यह अभी viral हो रहा है!</h3>
-                <p>❤️ 21K · 💬 810</p>
-            </div>
-        </div>
-
-        <div class="short-card">
-            <div class="short-visual">🤯</div>
-            <div class="short-info">
-                <h3>आपको यह पता था?</h3>
-                <p>❤️ 8K · 💬 240</p>
-            </div>
-        </div>
-
-        <div class="short-card">
-            <div class="short-visual">🚀</div>
-            <div class="short-info">
-                <h3>Future की technology</h3>
-                <p>❤️ 15K · 💬 510</p>
-            </div>
-        </div>
-
-        <div class="short-card">
-            <div class="short-visual">🎮</div>
-            <div class="short-info">
-                <h3>Gaming का amazing trick</h3>
-                <p>❤️ 32K · 💬 1.2K</p>
-            </div>
-        </div>
-
-    </div>
-
+<section class="section" id="aiSection">
+  <div class="section-head"><h2>🤖 AI Tools</h2><button class="view" onclick="openAI()">View All →</button></div>
+  <div class="ai-grid">
+    <button class="ai-card" onclick="openAI('chat')"><span>💬</span><h3>AI Chat</h3><p>Smart AI Assistant</p></button>
+    <button class="ai-card" onclick="openAI('image')"><span>🖼️</span><h3>AI Image</h3><p>Generate Images</p></button>
+    <button class="ai-card" onclick="openAI('code')"><span>💻</span><h3>AI Code</h3><p>Code Generator</p></button>
+    <button class="ai-card" onclick="openAI('writer')"><span>✍️</span><h3>AI Writer</h3><p>Content Writer</p></button>
+    <button class="ai-card" onclick="openAI('voice')"><span>🎙️</span><h3>Voice AI</h3><p>Text to Speech</p></button>
+    <button class="ai-card" onclick="openAI()"><span>⊞</span><h3>More Tools</h3><p>Explore AI</p></button>
+  </div>
 </section>
 
-
-<!-- GAMES -->
-
-<section class="section">
-
-    <div class="section-title">
-        <h2>🎮 Games</h2>
-        <span class="view-all">Play All →</span>
-    </div>
-
-    <div class="card-grid">
-
-        <div class="card">
-            <div class="card-image">🏎️</div>
-            <div class="card-body">
-                <h3>Speed Racing</h3>
-                <p>अपना high score बनाएं।</p>
-            </div>
-        </div>
-
-        <div class="card">
-            <div class="card-image">🧩</div>
-            <div class="card-body">
-                <h3>Brain Puzzle</h3>
-                <p>अपना दिमाग test करें।</p>
-            </div>
-        </div>
-
-        <div class="card">
-            <div class="card-image">🐍</div>
-            <div class="card-body">
-                <h3>Classic Snake</h3>
-                <p>Classic game फिर से खेलें।</p>
-            </div>
-        </div>
-
-        <div class="card">
-            <div class="card-image">🏆</div>
-            <div class="card-body">
-                <h3>Daily Quiz</h3>
-                <p>आज का challenge पूरा करें।</p>
-            </div>
-        </div>
-
-    </div>
-
+<section class="section" id="gamesSection">
+  <div class="section-head"><h2>🎮 Popular Games</h2><button class="view" onclick="openGames()">View All →</button></div>
+  <div class="game-grid">
+    <article class="card game" onclick="openGame('runner')"><div class="thumb">🏃</div><div class="card-body"><h3>Endless Runner</h3></div></article>
+    <article class="card game" onclick="openGame('ludo')"><div class="thumb">🎲</div><div class="card-body"><h3>Ludo Mini</h3></div></article>
+    <article class="card game" onclick="openGame('memory')"><div class="thumb">🧩</div><div class="card-body"><h3>Memory Match</h3></div></article>
+    <article class="card game" onclick="openGame('quiz')"><div class="thumb">🧠</div><div class="card-body"><h3>Daily Quiz</h3></div></article>
+    <article class="card game" onclick="openGame('snake')"><div class="thumb">🐍</div><div class="card-body"><h3>Snake</h3></div></article>
+    <article class="card game" onclick="openGame('tictactoe')"><div class="thumb">❌</div><div class="card-body"><h3>Tic Tac Toe</h3></div></article>
+  </div>
 </section>
 
-
-<!-- TOOLS -->
-
-<section class="section">
-
-    <div class="section-title">
-        <h2>🛠️ Useful Tools</h2>
-        <span class="view-all">All Tools →</span>
-    </div>
-
-    <div class="tools-grid">
-
-        <div class="tool">
-            <div>🧮</div>
-            <span>Calculator</span>
-        </div>
-
-        <div class="tool">
-            <div>🔳</div>
-            <span>QR Generator</span>
-        </div>
-
-        <div class="tool">
-            <div>🔄</div>
-            <span>Converter</span>
-        </div>
-
-        <div class="tool">
-            <div>📝</div>
-            <span>Notes</span>
-        </div>
-
-        <div class="tool">
-            <div>📄</div>
-            <span>PDF Tools</span>
-        </div>
-
-        <div class="tool">
-            <div>🌤️</div>
-            <span>Weather</span>
-        </div>
-
-    </div>
-
+<section class="section" id="toolsSection">
+  <div class="section-head"><h2>🛠️ Useful Tools</h2><button class="view" onclick="openTools()">View All →</button></div>
+  <div class="tool-grid">
+    <button class="tool-card" onclick="openTool('calculator')"><span>🧮</span><h3>Calculator</h3></button>
+    <button class="tool-card" onclick="openTool('qr')"><span>▦</span><h3>QR Generator</h3></button>
+    <button class="tool-card" onclick="openTool('converter')"><span>🔄</span><h3>Converter</h3></button>
+    <button class="tool-card" onclick="openTool('notes')"><span>📝</span><h3>Notes</h3></button>
+    <button class="tool-card" onclick="openTool('pdf')"><span>📄</span><h3>PDF Tools</h3></button>
+    <button class="tool-card" onclick="openTool('weather')"><span>🌤️</span><h3>Weather</h3></button>
+  </div>
 </section>
-
-
-<!-- FOOTER -->
-
-<footer class="footer">
-
-    <strong>NEXORA</strong>
-
-    <p style="margin-top:10px;">
-        AI • News • Shorts • Entertainment • Games • Tools
-    </p>
-
-    <p style="margin-top:15px;">
-        © 2026 NEXORA. All Rights Reserved.
-    </p>
-
-</footer>
 
 </main>
 
+<!-- SHORTS -->
+<div class="shorts-modal" id="shortsModal">
+  <div class="shorts-feed" id="shortsFeed">
+    <article class="short"><div class="short-bg">😂</div><div class="short-top"><b>🎬 NEXORA Shorts</b><button class="short-close" onclick="closeShorts()">×</button></div><div class="short-content"><h2>आज का सबसे funny moment 😂</h2><p>@NEXORA • #funny #viral</p></div><div class="side"><button onclick="toggleLike(this)">♡<small>12K</small></button><button onclick="commentDemo()">💬<small>430</small></button><button onclick="shareSite('Funny Short')">↗<small>Share</small></button><button onclick="toggleSave(this)">🔖<small>Save</small></button></div></article>
+    <article class="short"><div class="short-bg two">🔥</div><div class="short-top"><b>🔥 Trending</b><button class="short-close" onclick="closeShorts()">×</button></div><div class="short-content"><h2>यह अभी viral हो रहा है!</h2><p>@NEXORA • #trending #viral</p></div><div class="side"><button onclick="toggleLike(this)">♡<small>21K</small></button><button onclick="commentDemo()">💬<small>810</small></button><button onclick="shareSite('Trending Short')">↗<small>Share</small></button><button onclick="toggleSave(this)">🔖<small>Save</small></button></div></article>
+    <article class="short"><div class="short-bg three">🌍</div><div class="short-top"><b>🧠 Did You Know?</b><button class="short-close" onclick="closeShorts()">×</button></div><div class="short-content"><h2>आपको यह पता था?</h2><p>@NEXORA • #facts #knowledge</p></div><div class="side"><button onclick="toggleLike(this)">♡<small>8K</small></button><button onclick="commentDemo()">💬<small>240</small></button><button onclick="shareSite('Facts Short')">↗<small>Share</small></button><button onclick="toggleSave(this)">🔖<small>Save</small></button></div></article>
+    <article class="short"><div class="short-bg">🚘</div><div class="short-top"><b>🚀 Technology</b><button class="short-close" onclick="closeShorts()">×</button></div><div class="short-content"><h2>Future की technology देखो! 🤯</h2><p>@NEXORA • #technology #future</p></div><div class="side"><button onclick="toggleLike(this)">♡<small>15K</small></button><button onclick="commentDemo()">💬<small>510</small></button><button onclick="shareSite('Technology Short')">↗<small>Share</small></button><button onclick="toggleSave(this)">🔖<small>Save</small></button></div></article>
+    <article class="short"><div class="short-bg two">🎮</div><div class="short-top"><b>🎮 Gaming</b><button class="short-close" onclick="closeShorts()">×</button></div><div class="short-content"><h2>Insane Gaming Moment! 🎮</h2><p>@NEXORA • #gaming #tips</p></div><div class="side"><button onclick="toggleLike(this)">♡<small>32K</small></button><button onclick="commentDemo()">💬<small>1.2K</small></button><button onclick="shareSite('Gaming Short')">↗<small>Share</small></button><button onclick="toggleSave(this)">🔖<small>Save</small></button></div></article>
+  </div>
+</div>
 
-<!-- MOBILE NAV -->
+<!-- GENERIC MODAL -->
+<div class="modal" id="modal" onclick="if(event.target===this)closeModal()">
+  <div class="modal-box">
+    <div class="modal-head"><b id="modalTitle">NEXORA</b><button class="close" onclick="closeModal()">×</button></div>
+    <div class="modal-body" id="modalBody"></div>
+  </div>
+</div>
 
-<nav class="bottom-nav">
+<div class="toast" id="toast"></div>
 
-<button class="active"
-
-onclick="window.scrollTo(0,0)">
-
-<span></span>
-
-Home
-
-</button>
-
-<button onclick="openShorts(0)">
-
-<span></span>
-
-Shorts
-
-</button>
-
-<button onclick="openSection('ai')">
-
-<span></span>
-
-ΑΙ
-
-</button>
-
-<button onclick="openSection('news')">
-
-<span></span>
-
-News
-
-</button>
-
-<button onclick="alert('Profile system अगले चरण में जोड़ा जाएगा।')">
-
-<span></span>
-
-Profile
-
-</button>
-
+<nav class="bottom">
+  <button class="active" onclick="goHome()"><span>⌂</span>Home</button>
+  <button onclick="openShorts(0)"><span>▶</span>Shorts</button>
+  <button onclick="openAI()"><span>🤖</span>AI</button>
+  <button onclick="openNews()"><span>▤</span>News</button>
+  <button onclick="openGames()"><span>🎮</span>Games</button>
+  <button onclick="openTools()"><span>🛠️</span>Tools</button>
+  <button onclick="openProfile()"><span>♙</span>Profile</button>
 </nav>
 
 <script>
+const $=id=>document.getElementById(id);
 
-/* ================= THEME ================= */
+function showToast(text){
+  const t=$("toast");t.textContent=text;t.classList.add("show");
+  clearTimeout(window.toastTimer);window.toastTimer=setTimeout(()=>t.classList.remove("show"),2200);
+}
+function openModal(title,body){
+  $("modalTitle").textContent=title;$("modalBody").innerHTML=body;$("modal").classList.add("open");
+}
+function closeModal(){$("modal").classList.remove("open")}
+function goHome(){window.scrollTo({top:0,behavior:"smooth"})}
+function openExplore(){$("categories").scrollIntoView({behavior:"smooth"})}
+function openAbout(){openModal("About NEXORA",`<h2>Everything You Love. One Place.</h2><p class="mt">NEXORA का लक्ष्य AI, News, Shorts, Games, Entertainment, Education और daily tools को एक ही platform में लाना है.</p><button class="primary mt" onclick="closeModal();openAI()">Start with AI</button>`)}
+function toggleTheme(){document.body.classList.toggle("light");localStorage.setItem("nexora-theme",document.body.classList.contains("light")?"light":"dark")}
+if(localStorage.getItem("nexora-theme")==="light")document.body.classList.add("light");
 
-function toggleTheme(){
+function runSearch(){
+  const q=$("searchInput").value.trim();
+  if(!q){showToast("कुछ search करें");return}
+  const all=[...document.querySelectorAll("h2,h3,.category b")];
+  const hit=all.find(x=>x.textContent.toLowerCase().includes(q.toLowerCase()));
+  if(hit){hit.scrollIntoView({behavior:"smooth",block:"center"});showToast("Result मिला: "+hit.textContent.trim())}
+  else openModal("Search Results",`<h3>“${escapeHtml(q)}”</h3><p class="mt">इस demo में matching result नहीं मिला। Real web/database search backend में जोड़ा जाएगा.</p>`);
+}
+function escapeHtml(s){return s.replace(/[&<>"']/g,m=>({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#039;"}[m]))}
 
-document.body.classList.toggle("light");
-
-const isLight =
-
-document.body.classList.contains("light");
-
-localStorage.setItem("nexora-theme", isLight ? "light" : "dark");
-
+function openAI(mode="chat"){
+  let body="";
+  if(mode==="image") body=`<h3>🖼️ AI Image</h3><p class="mt">अपना image prompt लिखें.</p><textarea class="textarea mt" id="imagePrompt" placeholder="एक futuristic city बनाओ..."></textarea><button class="primary mt" onclick="showToast('Image generation API को backend से जोड़ना होगा')">Generate</button>`;
+  else if(mode==="code") body=`<h3>💻 AI Code</h3><textarea class="textarea mt" id="codePrompt" placeholder="आपको किस code की जरूरत है?"></textarea><button class="primary mt" onclick="showToast('Code request तैयार है — AI API जोड़ने पर real response आएगा')">Generate Code</button>`;
+  else if(mode==="writer") body=`<h3>✍️ AI Writer</h3><textarea class="textarea mt" placeholder="Article/topic लिखें..."></textarea><button class="primary mt" onclick="showToast('Writer API को backend से जोड़ना होगा')">Write</button>`;
+  else if(mode==="voice") body=`<h3>🎙️ Voice AI</h3><textarea class="textarea mt" id="voiceText" placeholder="बोलने के लिए text..."></textarea><button class="primary mt" onclick="speakText()">🔊 Speak</button>`;
+  else body=`<h3>💬 NEXORA AI Chat</h3><div class="chat mt" id="chat"><div class="msg bot">नमस्ते! मैं NEXORA AI demo हूँ। आप क्या पूछना चाहते हैं?</div></div><div class="chatbar"><input class="input" id="chatInput" placeholder="अपना सवाल लिखें..." onkeydown="if(event.key==='Enter')sendChat()"><button class="primary" onclick="sendChat()">Send</button></div><p class="mt" style="color:var(--muted);font-size:11px">Real AI answers के लिए secure server-side AI API जोड़ना होगा.</p>`;
+  openModal("NEXORA AI",body);
+}
+function sendChat(){
+  const i=$("chatInput"),q=i.value.trim();if(!q)return;
+  $("chat").insertAdjacentHTML("beforeend",`<div class="msg user">${escapeHtml(q)}</div><div class="msg bot">आपका सवाल मिला: “${escapeHtml(q)}”. Real AI model connect करने पर इसका पूरा जवाब यहीं आएगा.</div>`);
+  i.value="";$("chat").scrollTop=$("chat").scrollHeight;
+}
+function speakText(){
+  const t=$("voiceText")?.value.trim();if(!t)return showToast("Text लिखें");
+  if("speechSynthesis" in window){speechSynthesis.speak(new SpeechSynthesisUtterance(t));}else showToast("Voice support इस browser में उपलब्ध नहीं है");
 }
 
-if(localStorage.getItem("nexora-theme") === "light"){
-
-document.body.classList.add("light");
-
+function openNews(){
+  openModal("📰 NEXORA News",`
+    <div class="news-list">
+      <div class="news-item" onclick="openNewsArticle('संसद का विशेष सत्र आज से शुरू')"><div class="news-pic">🏛️</div><div><h3>संसद का विशेष सत्र आज से शुरू</h3><p>Latest national update.</p></div></div>
+      <div class="news-item" onclick="openNewsArticle('ISRO ने लॉन्च किया नया सैटेलाइट')"><div class="news-pic">🚀</div><div><h3>ISRO ने लॉन्च किया नया सैटेलाइट</h3><p>Science & technology.</p></div></div>
+      <div class="news-item" onclick="openNewsArticle('भारत ने जीता शानदार मैच')"><div class="news-pic">🏏</div><div><h3>भारत ने जीता शानदार मैच</h3><p>Sports update.</p></div></div>
+      <div class="news-item" onclick="openNewsArticle('शेयर बाजार में तेजी')"><div class="news-pic">📈</div><div><h3>शेयर बाजार में तेजी</h3><p>Business update.</p></div></div>
+    </div>
+    <p class="mt" style="color:var(--muted);font-size:11px">Live news के लिए news API/backend बाद में जोड़ा जाएगा.</p>`);
 }
+function openNewsArticle(title){openModal("📰 "+title,`<h2>${escapeHtml(title)}</h2><p class="mt">यह NEXORA demo article page है। यहाँ आगे पूरी खबर, फोटो, video, author, category, share, comments और related news जोड़ी जा सकती है.</p><button class="primary mt" onclick="shareSite('${escapeHtml(title)}')">↗ Share</button>`)}
+function openNotifications(){openModal("🔔 Notifications",`<div class="news-list"><div class="news-item"><div class="news-pic">🔥</div><div><h3>Trending Short</h3><p>एक नया short trending है.</p></div></div><div class="news-item"><div class="news-pic">📰</div><div><h3>News Update</h3><p>नई news category update उपलब्ध है.</p></div></div><div class="news-item"><div class="news-pic">🤖</div><div><h3>AI Update</h3><p>AI tools section में नया feature.</p></div></div></div>`)}
+function openProfile(){openModal("👤 Profile",`<div style="text-align:center"><div style="font-size:70px">👤</div><h2>NEXORA User</h2><p class="mt" style="color:var(--muted)">Login/signup system अगले backend चरण में जोड़ेंगे.</p><button class="primary mt" onclick="showToast('Login system के लिए backend/authentication चाहिए')">Login / Sign Up</button></div>`)}
 
-/* ================= SECTION NAVIGATION  ================= */
-
-function openSection(id) {
-
-const section = document.getElementById(id);
-
-if(section) {
-
-section.scrollIntoView({ behavior: "smooth", block: "start"
-
-});
-
+function openTools(){openModal("🛠️ Useful Tools",`<div class="tool-grid"><button class="tool-card" onclick="openTool('calculator')"><span>🧮</span><h3>Calculator</h3></button><button class="tool-card" onclick="openTool('qr')"><span>▦</span><h3>QR Generator</h3></button><button class="tool-card" onclick="openTool('converter')"><span>🔄</span><h3>Converter</h3></button><button class="tool-card" onclick="openTool('notes')"><span>📝</span><h3>Notes</h3></button><button class="tool-card" onclick="openTool('pdf')"><span>📄</span><h3>PDF Tools</h3></button><button class="tool-card" onclick="openTool('weather')"><span>🌤️</span><h3>Weather</h3></button></div>`)}
+function openTool(type){
+  if(type==="calculator")openModal("🧮 Calculator",`<input class="input" id="calc" placeholder="उदा. 25*4+10"><button class="primary mt" onclick="calcNow()">Calculate</button><div id="calcResult" class="mt" style="font-size:24px;font-weight:900"></div>`);
+  else if(type==="notes")openModal("📝 Notes",`<textarea class="textarea" id="notes" placeholder="अपने notes लिखें...">${escapeHtml(localStorage.getItem("nexora-notes")||"")}</textarea><button class="primary mt" onclick="saveNotes()">Save Notes</button>`);
+  else if(type==="converter")openModal("🔄 Converter",`<p>Simple km ↔ miles converter</p><input class="input mt" id="conv" type="number" placeholder="Kilometers"><button class="primary mt" onclick="convertKm()">Convert</button><div id="convResult" class="mt"></div>`);
+  else if(type==="qr")openModal("▦ QR Generator",`<input class="input" id="qrText" placeholder="Text / URL"><button class="primary mt" onclick="makeQR()">Generate</button><div id="qrResult" class="mt"></div><p class="mt" style="font-size:11px;color:var(--muted)">QR image generation library/backend को बाद में जोड़ सकते हैं.</p>`);
+  else if(type==="pdf")openModal("📄 PDF Tools",`<p>PDF tools hub तैयार है.</p><button class="secondary mt" onclick="showToast('PDF upload/processing के लिए backend चाहिए')">Upload PDF</button>`);
+  else openModal("🌤️ Weather",`<input class="input" id="city" placeholder="City"><button class="primary mt" onclick="showToast('Live weather API connect करना होगा')">Check Weather</button>`);
 }
+function calcNow(){try{$("calcResult").textContent=Function('"use strict";return ('+$("calc").value.replace(/[^0-9+\-*/().% ]/g,"")+')')()}catch{$("calcResult").textContent="Invalid expression"}}
+function saveNotes(){localStorage.setItem("nexora-notes",$("notes").value);showToast("Notes saved")}
+function convertKm(){const n=Number($("conv").value);$("convResult").textContent=isNaN(n)?"Invalid":`${n} km = ${(n*0.621371).toFixed(2)} miles`}
+function makeQR(){const t=$("qrText").value.trim();$("qrResult").innerHTML=t?`<div style="padding:20px;background:#fff;color:#111;border-radius:10px;text-align:center;font-weight:900">QR DEMO<br><small>${escapeHtml(t)}</small></div>`:"Text डालें"}
 
+function openGames(){openModal("🎮 Games",`<div class="game-grid"><button class="game card" onclick="openGame('runner')"><div class="thumb">🏃</div><div class="card-body"><h3>Runner</h3></div></button><button class="game card" onclick="openGame('tictactoe')"><div class="thumb">❌</div><div class="card-body"><h3>Tic Tac Toe</h3></div></button><button class="game card" onclick="openGame('quiz')"><div class="thumb">🧠</div><div class="card-body"><h3>Quiz</h3></div></button><button class="game card" onclick="openGame('memory')"><div class="thumb">🧩</div><div class="card-body"><h3>Memory</h3></div></button></div>`)}
+let ticTurn="X",tic=[];
+function openGame(type){
+  if(type==="tictactoe"){
+    tic=Array(9).fill("");ticTurn="X";
+    openModal("❌ Tic Tac Toe",`<div class="game-board"><div id="ticStatus" class="game-score">X की turn</div><div class="game-grid-board">${tic.map((_,i)=>`<button class="cell" onclick="ticMove(${i})"></button>`).join("")}</div><button class="secondary" onclick="openGame('tictactoe')">Restart</button></div>`);
+  }else if(type==="quiz"){
+    openModal("🧠 Daily Quiz",`<h3>भारत की राजधानी क्या है?</h3><button class="quiz-option" onclick="quizAnswer(this,true)">A. नई दिल्ली</button><button class="quiz-option" onclick="quizAnswer(this,false)">B. मुंबई</button><button class="quiz-option" onclick="quizAnswer(this,false)">C. जयपुर</button>`);
+  }else if(type==="memory"){
+    const vals=["🍎","🍎","🚀","🚀","🎮","🎮","⭐","⭐"];vals.sort(()=>Math.random()-.5);
+    openModal("🧩 Memory Match",`<div class="game-grid-board" style="grid-template-columns:repeat(4,65px)">${vals.map((v,i)=>`<button class="cell" style="width:65px;height:65px" onclick="memoryPick(this,'${v}')">?</button>`).join("")}</div><p id="memoryStatus" class="mt" style="text-align:center">दो cards मिलाएँ</p>`);
+  }else openModal("🏃 Endless Runner",`<div style="text-align:center"><div style="font-size:100px">🏃</div><h2>Tap Challenge</h2><div id="runScore" class="game-score">0</div><button class="primary" onclick="runTap()">TAP!</button><p class="mt" style="color:var(--muted)">10 seconds में ज्यादा taps करें.</p></div>`);
 }
-
-/* ================= SEARCH ================= */
-
-function searchSite(event){
-
-if(event && event.key !== "Enter"){
-
-return;
-
+function ticMove(i){
+  if(tic[i])return;tic[i]=ticTurn;
+  document.querySelectorAll(".cell")[i].textContent=ticTurn;
+  if(ticWin(ticTurn)){showToast(ticTurn+" wins!");return}
+  if(tic.every(Boolean)){showToast("Draw!");return}
+  ticTurn=ticTurn==="X"?"O":"X";$("ticStatus").textContent=ticTurn+" की turn";
 }
-
-alert( "NEXORA Search\n\n" + "आपने search किया: " + value + "\n\nReal search engine अगले चरण में जोड़ा जाएगा।" );
-
+function ticWin(p){return [[0,1,2],[3,4,5],[6,7,8],[0,3,6],[1,4,7],[2,5,8],[0,4,8],[2,4,6]].some(a=>a.every(i=>tic[i]===p))}
+let memFirst=null,memLock=false;
+function memoryPick(btn,val){
+  if(memLock||btn.textContent!=="?")return;btn.textContent=val;
+  if(!memFirst){memFirst={btn,val};return}
+  memLock=true;
+  if(memFirst.val===val){memFirst=null;memLock=false;showToast("Match!")}else{const first=memFirst.btn;memFirst=null;setTimeout(()=>{first.textContent="?";btn.textContent="?";memLock=false},650)}
 }
+function quizAnswer(btn,ok){btn.style.borderColor=ok?"#28d17c":"#ff4f65";btn.textContent+=ok?" ✓ Correct":" ✕ Try again"}
 
-
-/* ================= SIMPLE CARD INTERACTION ================= */
-
-document.querySelectorAll(".card").forEach(card => {
-
-card.addEventListener("click", () => {
-
-card.style.transform = "scale(.98)";
-
-setTimeout(() => {
-
-card.style.transform = "";
-
-},150);
-
-});
-
-});
-
-
-/* ================= SHORTS SYSTEM ================= */
+let runnerTimer=null,runnerScore=0;
+function runTap(){
+  if(runnerTimer)return;
+  runnerScore=0;$("runScore").textContent="0";
+  runnerTimer=setInterval(()=>{runnerScore++;$("runScore").textContent=runnerScore},100);
+  setTimeout(()=>{clearInterval(runnerTimer);runnerTimer=null;showToast("Score: "+runnerScore)},10000);
+}
 
 function openShorts(index=0){
-    const modal = document.getElementById("shortsModal");
-    const feed = document.getElementById("shortsFeed");
-    if(!modal || !feed) return;
-
-    modal.classList.add("open");
-    modal.setAttribute("aria-hidden","false");
-    document.body.style.overflow="hidden";
-
-    const items = feed.querySelectorAll(".full-short");
-    if(items[index]){
-        items[index].scrollIntoView({behavior:"instant", block:"start"});
-    }
+  $("shortsModal").classList.add("open");document.body.style.overflow="hidden";
+  const item=$("shortsFeed").children[index];if(item)item.scrollIntoView({block:"start"});
 }
-
-function closeShorts(){
-    const modal = document.getElementById("shortsModal");
-    if(!modal) return;
-
-    modal.classList.remove("open");
-    modal.setAttribute("aria-hidden","true");
-    document.body.style.overflow="";
+function closeShorts(){$("shortsModal").classList.remove("open");document.body.style.overflow=""}
+function toggleLike(b){b.dataset.liked=b.dataset.liked==="1"?"0":"1";b.firstChild.textContent=b.dataset.liked==="1"?"♥":"♡";showToast(b.dataset.liked==="1"?"Liked":"Like removed")}
+function toggleSave(b){b.dataset.saved=b.dataset.saved==="1"?"0":"1";showToast(b.dataset.saved==="1"?"Saved":"Removed from saved")}
+function commentDemo(){openModal("💬 Comments",`<div class="chat"><div class="msg bot">यहाँ comments दिखाई देंगे.</div></div><textarea class="textarea mt" placeholder="Comment लिखें..."></textarea><button class="primary mt" onclick="showToast('Comment saved in demo')">Post Comment</button>`)}
+async function shareSite(title){
+  const data={title:"NEXORA",text:title,url:location.href};
+  if(navigator.share){try{await navigator.share(data)}catch(e){}}
+  else{try{await navigator.clipboard.writeText(location.href);showToast("Link copied")}catch(e){showToast("Share: "+location.href)}}
 }
-
-function shortLike(button){
-    button.classList.toggle("active");
-    if(button.classList.contains("active")){
-        button.firstChild.textContent="♥";
-    }else{
-        button.firstChild.textContent="♡";
-    }
-}
-
-function shortSave(button){
-    button.classList.toggle("active");
-    alert(
-        button.classList.contains("active")
-        ? "Short saved!"
-        : "Short removed from saved."
-    );
-}
-
-async function shareShort(title){
-    const text = "NEXORA Shorts: " + title;
-
-    if(navigator.share){
-        try{
-            await navigator.share({
-                title:"NEXORA Shorts",
-                text:text,
-                url:window.location.href
-            });
-        }catch(e){}
-    }else{
-        try{
-            await navigator.clipboard.writeText(window.location.href);
-            alert("Short link copied!");
-        }catch(e){
-            alert("Share link: " + window.location.href);
-        }
-    }
-}
-
-document.addEventListener("keydown", function(event){
-    if(event.key === "Escape"){
-        closeShorts();
-    }
-});
-
+document.addEventListener("keydown",e=>{if(e.key==="Escape"){closeModal();closeShorts()}})
 </script>
-
-
-<!-- ================= FULL SCREEN SHORTS MODAL ================= -->
-<div class="shorts-modal" id="shortsModal" aria-hidden="true">
-    <div class="shorts-feed" id="shortsFeed">
-
-        <article class="full-short">
-            <div class="full-short-bg">😂</div>
-            <div class="full-short-gradient"></div>
-            <div class="short-topbar">
-                <div class="short-title">🎬 NEXORA Shorts</div>
-                <button class="short-close" onclick="closeShorts()">×</button>
-            </div>
-            <div class="full-short-content">
-                <h2>आज का सबसे funny moment</h2>
-                <p>@NEXORA • #funny #viral</p>
-            </div>
-            <div class="short-side-actions">
-                <button onclick="shortLike(this)">♡<small>12K</small></button>
-                <button onclick="alert('Comment system अगले चरण में database से जुड़ेगा।')">💬<small>430</small></button>
-                <button onclick="shareShort('आज का सबसे funny moment')">↗<small>Share</small></button>
-                <button onclick="shortSave(this)">🔖<small>Save</small></button>
-            </div>
-        </article>
-
-        <article class="full-short">
-            <div class="full-short-bg two">🔥</div>
-            <div class="full-short-gradient"></div>
-            <div class="short-topbar">
-                <div class="short-title">🔥 Trending</div>
-                <button class="short-close" onclick="closeShorts()">×</button>
-            </div>
-            <div class="full-short-content">
-                <h2>यह अभी viral हो रहा है!</h2>
-                <p>@NEXORA • #trending #viral</p>
-            </div>
-            <div class="short-side-actions">
-                <button onclick="shortLike(this)">♡<small>21K</small></button>
-                <button onclick="alert('Comment system अगले चरण में database से जुड़ेगा।')">💬<small>810</small></button>
-                <button onclick="shareShort('यह अभी viral हो रहा है!')">↗<small>Share</small></button>
-                <button onclick="shortSave(this)">🔖<small>Save</small></button>
-            </div>
-        </article>
-
-        <article class="full-short">
-            <div class="full-short-bg three">🤯</div>
-            <div class="full-short-gradient"></div>
-            <div class="short-topbar">
-                <div class="short-title">🧠 Did You Know?</div>
-                <button class="short-close" onclick="closeShorts()">×</button>
-            </div>
-            <div class="full-short-content">
-                <h2>आपको यह पता था?</h2>
-                <p>@NEXORA • #facts #knowledge</p>
-            </div>
-            <div class="short-side-actions">
-                <button onclick="shortLike(this)">♡<small>8K</small></button>
-                <button onclick="alert('Comment system अगले चरण में database से जुड़ेगा।')">💬<small>240</small></button>
-                <button onclick="shareShort('आपको यह पता था?')">↗<small>Share</small></button>
-                <button onclick="shortSave(this)">🔖<small>Save</small></button>
-            </div>
-        </article>
-
-        <article class="full-short">
-            <div class="full-short-bg">🚀</div>
-            <div class="full-short-gradient"></div>
-            <div class="short-topbar">
-                <div class="short-title">🚀 Technology</div>
-                <button class="short-close" onclick="closeShorts()">×</button>
-            </div>
-            <div class="full-short-content">
-                <h2>Future की technology</h2>
-                <p>@NEXORA • #technology #future</p>
-            </div>
-            <div class="short-side-actions">
-                <button onclick="shortLike(this)">♡<small>15K</small></button>
-                <button onclick="alert('Comment system अगले चरण में database से जुड़ेगा।')">💬<small>510</small></button>
-                <button onclick="shareShort('Future की technology')">↗<small>Share</small></button>
-                <button onclick="shortSave(this)">🔖<small>Save</small></button>
-            </div>
-        </article>
-
-        <article class="full-short">
-            <div class="full-short-bg">🎮</div>
-            <div class="full-short-gradient"></div>
-            <div class="short-topbar">
-                <div class="short-title">🎮 Gaming</div>
-                <button class="short-close" onclick="closeShorts()">×</button>
-            </div>
-            <div class="full-short-content">
-                <h2>Gaming का amazing trick</h2>
-                <p>@NEXORA • #gaming #tips</p>
-            </div>
-            <div class="short-side-actions">
-                <button onclick="shortLike(this)">♡<small>32K</small></button>
-                <button onclick="alert('Comment system अगले चरण में database से जुड़ेगा।')">💬<small>1.2K</small></button>
-                <button onclick="shareShort('Gaming का amazing trick')">↗<small>Share</small></button>
-                <button onclick="shortSave(this)">🔖<small>Save</small></button>
-            </div>
-        </article>
-
-    </div>
-</div>
-
 </body>
-
 </html>
-
-    
