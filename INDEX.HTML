@@ -1,0 +1,1176 @@
+<!DOCTYPE html>
+<html lang="hi">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>NEXORA | AI • News • Shorts • Games • Entertainment</title>
+
+<meta name="description"
+content="NEXORA - AI, News, Shorts, Entertainment, Games और Useful Tools का All-in-One Platform.">
+
+<style>
+*{
+    box-sizing:border-box;
+    margin:0;
+    padding:0;
+}
+
+html{
+    scroll-behavior:smooth;
+}
+
+body{
+    font-family:Arial,"Noto Sans Devanagari",sans-serif;
+    background:#0b0d12;
+    color:#fff;
+    min-height:100vh;
+    overflow-x:hidden;
+}
+
+button,
+input{
+    font:inherit;
+}
+
+button{
+    cursor:pointer;
+    border:0;
+}
+
+/* ================= HEADER ================= */
+
+.header{
+    position:sticky;
+    top:0;
+    z-index:1000;
+    width:100%;
+    backdrop-filter:blur(18px);
+    background:rgba(11,13,18,.88);
+    border-bottom:1px solid rgba(255,255,255,.08);
+}
+
+.header-inner{
+    max-width:1400px;
+    margin:auto;
+    height:70px;
+    display:flex;
+    align-items:center;
+    gap:22px;
+    padding:0 20px;
+}
+
+.logo{
+    font-size:26px;
+    font-weight:900;
+    letter-spacing:-1px;
+    white-space:nowrap;
+}
+
+.logo span{
+    background:linear-gradient(90deg,#7c3cff,#00d9ff);
+    -webkit-background-clip:text;
+    background-clip:text;
+    color:transparent;
+}
+
+.search-box{
+    flex:1;
+    max-width:600px;
+    margin:auto;
+    position:relative;
+}
+
+.search-box input{
+    width:100%;
+    height:44px;
+    border-radius:25px;
+    border:1px solid rgba(255,255,255,.1);
+    outline:none;
+    padding:0 50px 0 18px;
+    background:#171a22;
+    color:#fff;
+}
+
+.search-box button{
+    position:absolute;
+    right:5px;
+    top:5px;
+    width:34px;
+    height:34px;
+    border-radius:50%;
+    background:#7c3cff;
+    color:white;
+}
+
+.header-actions{
+    display:flex;
+    gap:9px;
+}
+
+.icon-btn{
+    width:42px;
+    height:42px;
+    border-radius:50%;
+    background:#171a22;
+    color:#fff;
+    border:1px solid rgba(255,255,255,.08);
+}
+
+.icon-btn:hover{
+    background:#7c3cff;
+}
+
+/* ================= MAIN ================= */
+
+.container{
+    width:min(1400px,94%);
+    margin:auto;
+}
+
+/* ================= HERO ================= */
+
+.hero{
+    margin-top:25px;
+    min-height:420px;
+    border-radius:30px;
+    position:relative;
+    overflow:hidden;
+    padding:55px;
+    display:flex;
+    align-items:center;
+    background:
+      radial-gradient(circle at 80% 20%,rgba(0,217,255,.35),transparent 30%),
+      radial-gradient(circle at 20% 80%,rgba(124,60,255,.4),transparent 35%),
+      linear-gradient(135deg,#151829,#090b10);
+    border:1px solid rgba(255,255,255,.08);
+}
+
+.hero-content{
+    max-width:700px;
+    position:relative;
+    z-index:2;
+}
+
+.badge{
+    display:inline-block;
+    padding:8px 14px;
+    border-radius:20px;
+    background:rgba(124,60,255,.2);
+    border:1px solid rgba(124,60,255,.5);
+    color:#cdb8ff;
+    margin-bottom:18px;
+    font-size:14px;
+}
+
+.hero h1{
+    font-size:clamp(40px,6vw,75px);
+    line-height:.98;
+    margin-bottom:20px;
+}
+
+.hero h1 span{
+    background:linear-gradient(90deg,#8b5cff,#00e5ff);
+    -webkit-background-clip:text;
+    background-clip:text;
+    color:transparent;
+}
+
+.hero p{
+    color:#b9becb;
+    font-size:18px;
+    line-height:1.6;
+    max-width:650px;
+}
+
+.hero-buttons{
+    display:flex;
+    gap:12px;
+    margin-top:28px;
+    flex-wrap:wrap;
+}
+
+.primary-btn,
+.secondary-btn{
+    padding:13px 22px;
+    border-radius:25px;
+    font-weight:bold;
+}
+
+.primary-btn{
+    background:linear-gradient(90deg,#7c3cff,#00bde8);
+    color:#fff;
+}
+
+.secondary-btn{
+    background:#191c25;
+    color:#fff;
+    border:1px solid rgba(255,255,255,.1);
+}
+
+.primary-btn:hover,
+.secondary-btn:hover{
+    transform:translateY(-2px);
+}
+
+/* ================= SECTION ================= */
+
+.section{
+    padding:38px 0 5px;
+}
+
+.section-title{
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+    margin-bottom:18px;
+}
+
+.section-title h2{
+    font-size:25px;
+}
+
+.view-all{
+    color:#a98aff;
+    font-size:14px;
+}
+
+/* ================= CATEGORY ================= */
+
+.category-grid{
+    display:grid;
+    grid-template-columns:repeat(8,1fr);
+    gap:12px;
+}
+
+.category{
+    min-height:100px;
+    border-radius:18px;
+    background:#151820;
+    border:1px solid rgba(255,255,255,.07);
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+    align-items:center;
+    gap:8px;
+    transition:.25s;
+}
+
+.category:hover{
+    transform:translateY(-5px);
+    border-color:#7c3cff;
+    background:#1a1d28;
+}
+
+.category-icon{
+    font-size:30px;
+}
+
+/* ================= CARDS ================= */
+
+.card-grid{
+    display:grid;
+    grid-template-columns:repeat(4,1fr);
+    gap:16px;
+}
+
+.card{
+    background:#151820;
+    border:1px solid rgba(255,255,255,.07);
+    border-radius:20px;
+    overflow:hidden;
+    transition:.25s;
+}
+
+.card:hover{
+    transform:translateY(-5px);
+    border-color:rgba(124,60,255,.6);
+}
+
+.card-image{
+    height:180px;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    font-size:55px;
+    background:
+      linear-gradient(135deg,#24213d,#11151e);
+}
+
+.card-body{
+    padding:15px;
+}
+
+.card-body h3{
+    font-size:17px;
+    margin-bottom:7px;
+}
+
+.card-body p{
+    color:#9097a6;
+    font-size:13px;
+    line-height:1.5;
+}
+
+.card-meta{
+    display:flex;
+    justify-content:space-between;
+    margin-top:13px;
+    color:#858c9a;
+    font-size:12px;
+}
+
+/* ================= AI ================= */
+
+.ai-box{
+    padding:25px;
+    border-radius:25px;
+    background:
+      radial-gradient(circle at 90% 10%,rgba(0,217,255,.15),transparent 30%),
+      linear-gradient(135deg,#161a27,#11131a);
+    border:1px solid rgba(255,255,255,.08);
+}
+
+.ai-grid{
+    display:grid;
+    grid-template-columns:repeat(4,1fr);
+    gap:12px;
+    margin-top:18px;
+}
+
+.ai-card{
+    background:#1b1e28;
+    padding:18px;
+    border-radius:16px;
+    border:1px solid rgba(255,255,255,.06);
+}
+
+.ai-card span{
+    font-size:27px;
+}
+
+.ai-card h3{
+    margin-top:10px;
+    font-size:15px;
+}
+
+.ai-card p{
+    color:#8e95a4;
+    font-size:12px;
+    margin-top:5px;
+}
+
+/* ================= SHORTS ================= */
+
+.shorts-grid{
+    display:grid;
+    grid-template-columns:repeat(5,1fr);
+    gap:14px;
+}
+
+.short-card{
+    height:310px;
+    border-radius:20px;
+    overflow:hidden;
+    position:relative;
+    background:linear-gradient(160deg,#32205b,#0f1720);
+    border:1px solid rgba(255,255,255,.08);
+}
+
+.short-visual{
+    height:100%;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    font-size:65px;
+}
+
+.short-info{
+    position:absolute;
+    bottom:0;
+    left:0;
+    right:0;
+    padding:15px;
+    background:linear-gradient(transparent,rgba(0,0,0,.9));
+}
+
+.short-info h3{
+    font-size:15px;
+}
+
+.short-info p{
+    margin-top:5px;
+    font-size:12px;
+    color:#bbb;
+}
+
+/* ================= TOOLS ================= */
+
+.tools-grid{
+    display:grid;
+    grid-template-columns:repeat(6,1fr);
+    gap:12px;
+}
+
+.tool{
+    background:#151820;
+    padding:20px 10px;
+    border-radius:17px;
+    text-align:center;
+    border:1px solid rgba(255,255,255,.06);
+}
+
+.tool div{
+    font-size:28px;
+    margin-bottom:8px;
+}
+
+.tool span{
+    font-size:13px;
+}
+
+/* ================= FOOTER ================= */
+
+.footer{
+    margin-top:50px;
+    padding:35px 20px 100px;
+    text-align:center;
+    color:#777e8c;
+    border-top:1px solid rgba(255,255,255,.07);
+}
+
+.footer strong{
+    color:#fff;
+}
+
+/* ================= BOTTOM NAV ================= */
+
+.bottom-nav{
+    display:none;
+}
+
+/* ================= LIGHT MODE ================= */
+
+body.light{
+    background:#f4f6fa;
+    color:#151820;
+}
+
+body.light .header{
+    background:rgba(255,255,255,.9);
+    border-bottom:1px solid #ddd;
+}
+
+body.light .search-box input,
+body.light .icon-btn,
+body.light .category,
+body.light .card,
+body.light .ai-card,
+body.light .tool{
+    background:#fff;
+    color:#222;
+}
+
+body.light .search-box input{
+    border-color:#ddd;
+}
+
+body.light .hero{
+    color:#fff;
+}
+
+body.light .card-body p,
+body.light .ai-card p{
+    color:#666;
+}
+
+/* ================= RESPONSIVE ================= */
+
+@media(max-width:1100px){
+
+    .category-grid{
+        grid-template-columns:repeat(4,1fr);
+    }
+
+    .card-grid{
+        grid-template-columns:repeat(2,1fr);
+    }
+
+    .shorts-grid{
+        grid-template-columns:repeat(3,1fr);
+    }
+
+    .tools-grid{
+        grid-template-columns:repeat(4,1fr);
+    }
+
+    .ai-grid{
+        grid-template-columns:repeat(2,1fr);
+    }
+}
+
+@media(max-width:700px){
+
+    .header-inner{
+        height:62px;
+        padding:0 12px;
+        gap:10px;
+    }
+
+    .logo{
+        font-size:21px;
+    }
+
+    .header-actions{
+        display:none;
+    }
+
+    .search-box{
+        max-width:none;
+    }
+
+    .hero{
+        min-height:400px;
+        padding:30px 22px;
+        border-radius:24px;
+    }
+
+    .hero p{
+        font-size:15px;
+    }
+
+    .section{
+        padding-top:28px;
+    }
+
+    .category-grid{
+        grid-template-columns:repeat(4,1fr);
+        gap:8px;
+    }
+
+    .category{
+        min-height:82px;
+        font-size:11px;
+    }
+
+    .category-icon{
+        font-size:24px;
+    }
+
+    .card-grid{
+        grid-template-columns:repeat(2,1fr);
+        gap:10px;
+    }
+
+    .card-image{
+        height:130px;
+        font-size:42px;
+    }
+
+    .card-body{
+        padding:11px;
+    }
+
+    .card-body h3{
+        font-size:14px;
+    }
+
+    .shorts-grid{
+        display:flex;
+        overflow-x:auto;
+        scroll-snap-type:x mandatory;
+        padding-bottom:5px;
+    }
+
+    .short-card{
+        min-width:190px;
+        height:300px;
+        scroll-snap-align:start;
+    }
+
+    .tools-grid{
+        grid-template-columns:repeat(3,1fr);
+        gap:8px;
+    }
+
+    .tool{
+        padding:15px 5px;
+    }
+
+    .ai-grid{
+        grid-template-columns:repeat(2,1fr);
+    }
+
+    .bottom-nav{
+        display:flex;
+        position:fixed;
+        bottom:0;
+        left:0;
+        right:0;
+        height:65px;
+        z-index:2000;
+        background:rgba(15,17,23,.95);
+        backdrop-filter:blur(15px);
+        border-top:1px solid rgba(255,255,255,.1);
+        justify-content:space-around;
+        align-items:center;
+    }
+
+    .bottom-nav button{
+        background:none;
+        color:#969daa;
+        font-size:11px;
+        display:flex;
+        flex-direction:column;
+        align-items:center;
+        gap:4px;
+    }
+
+    .bottom-nav button span{
+        font-size:21px;
+    }
+
+    .bottom-nav button.active{
+        color:#9b78ff;
+    }
+}
+</style>
+</head>
+
+<body>
+
+<!-- HEADER -->
+
+<header class="header">
+    <div class="header-inner">
+
+        <div class="logo">
+            <span>NEXORA</span>
+        </div>
+
+        <div class="search-box">
+            <input
+                type="search"
+                id="searchInput"
+                placeholder="Search anything..."
+                onkeyup="searchSite(event)"
+            >
+            <button onclick="searchSite()">⌕</button>
+        </div>
+
+        <div class="header-actions">
+            <button class="icon-btn" onclick="toggleTheme()">☀️</button>
+            <button class="icon-btn">🔔</button>
+            <button class="icon-btn">👤</button>
+        </div>
+
+    </div>
+</header>
+
+
+<main class="container">
+
+<!-- HERO -->
+
+<section class="hero">
+
+    <div class="hero-content">
+
+        <div class="badge">🚀 THE NEXT GENERATION PLATFORM</div>
+
+        <h1>
+            Everything You Love.
+            <span>One Place.</span>
+        </h1>
+
+        <p>
+            AI, News, Shorts, Entertainment, Games और
+            powerful daily tools — सब कुछ एक ही जगह।
+        </p>
+
+        <div class="hero-buttons">
+
+            <button class="primary-btn"
+                    onclick="openSection('ai')">
+                🤖 Try AI
+            </button>
+
+            <button class="secondary-btn"
+                    onclick="openSection('shorts')">
+                ▶ Watch Shorts
+            </button>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- CATEGORIES -->
+
+<section class="section">
+
+    <div class="section-title">
+        <h2>Explore NEXORA</h2>
+        <span class="view-all">View All →</span>
+    </div>
+
+    <div class="category-grid">
+
+        <div class="category" onclick="openSection('ai')">
+            <div class="category-icon">🤖</div>
+            AI
+        </div>
+
+        <div class="category" onclick="openSection('news')">
+            <div class="category-icon">📰</div>
+            News
+        </div>
+
+        <div class="category" onclick="openSection('shorts')">
+            <div class="category-icon">🎬</div>
+            Shorts
+        </div>
+
+        <div class="category">
+            <div class="category-icon">🎥</div>
+            Videos
+        </div>
+
+        <div class="category">
+            <div class="category-icon">🎮</div>
+            Games
+        </div>
+
+        <div class="category">
+            <div class="category-icon">😂</div>
+            Fun
+        </div>
+
+        <div class="category">
+            <div class="category-icon">🛠️</div>
+            Tools
+        </div>
+
+        <div class="category">
+            <div class="category-icon">🔥</div>
+            Trending
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- TRENDING -->
+
+<section class="section" id="news">
+
+    <div class="section-title">
+        <h2>🔥 Trending Now</h2>
+        <span class="view-all">See All →</span>
+    </div>
+
+    <div class="card-grid">
+
+        <article class="card">
+            <div class="card-image">🌎</div>
+            <div class="card-body">
+                <h3>आज की सबसे बड़ी खबरें</h3>
+                <p>Latest और trending news एक ही जगह।</p>
+                <div class="card-meta">
+                    <span>📰 News</span>
+                    <span>2.4K views</span>
+                </div>
+            </div>
+        </article>
+
+        <article class="card">
+            <div class="card-image">📱</div>
+            <div class="card-body">
+                <h3>Technology की नई दुनिया</h3>
+                <p>Technology और AI की latest जानकारी।</p>
+                <div class="card-meta">
+                    <span>💻 Tech</span>
+                    <span>1.8K views</span>
+                </div>
+            </div>
+        </article>
+
+        <article class="card">
+            <div class="card-image">🏆</div>
+            <div class="card-body">
+                <h3>आज का Trending Topic</h3>
+                <p>लोग आज क्या सबसे ज्यादा देख रहे हैं?</p>
+                <div class="card-meta">
+                    <span>🔥 Trending</span>
+                    <span>3.1K views</span>
+                </div>
+            </div>
+        </article>
+
+        <article class="card">
+            <div class="card-image">🚀</div>
+            <div class="card-body">
+                <h3>Future Technology</h3>
+                <p>भविष्य की technology के बारे में जानें।</p>
+                <div class="card-meta">
+                    <span>🤖 AI</span>
+                    <span>4.2K views</span>
+                </div>
+            </div>
+        </article>
+
+    </div>
+
+</section>
+
+
+<!-- AI -->
+
+<section class="section" id="ai">
+
+    <div class="ai-box">
+
+        <div class="section-title">
+            <h2>🤖 NEXORA AI</h2>
+            <span class="view-all">AI Hub →</span>
+        </div>
+
+        <p style="color:#9da4b3;">
+            सवाल पूछें, लिखें, सीखें, translate करें और
+            अपने काम को आसान बनाएं।
+        </p>
+
+        <div class="ai-grid">
+
+            <div class="ai-card">
+                <span>💬</span>
+                <h3>AI Chat</h3>
+                <p>अपने सवालों के जवाब पाएं।</p>
+            </div>
+
+            <div class="ai-card">
+                <span>✍️</span>
+                <h3>AI Writer</h3>
+                <p>Articles और content लिखें।</p>
+            </div>
+
+            <div class="ai-card">
+                <span>🌐</span>
+                <h3>Translator</h3>
+                <p>भाषाओं का translation करें।</p>
+            </div>
+
+            <div class="ai-card">
+                <span>📚</span>
+                <h3>Study AI</h3>
+                <p>पढ़ाई में AI की मदद लें।</p>
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- SHORTS -->
+
+<section class="section" id="shorts">
+
+    <div class="section-title">
+        <h2>🎬 Trending Shorts</h2>
+        <span class="view-all">Watch All →</span>
+    </div>
+
+    <div class="shorts-grid">
+
+        <div class="short-card">
+            <div class="short-visual">😂</div>
+            <div class="short-info">
+                <h3>आज का सबसे funny moment</h3>
+                <p>❤️ 12K · 💬 430</p>
+            </div>
+        </div>
+
+        <div class="short-card">
+            <div class="short-visual">🔥</div>
+            <div class="short-info">
+                <h3>यह अभी viral हो रहा है!</h3>
+                <p>❤️ 21K · 💬 810</p>
+            </div>
+        </div>
+
+        <div class="short-card">
+            <div class="short-visual">🤯</div>
+            <div class="short-info">
+                <h3>आपको यह पता था?</h3>
+                <p>❤️ 8K · 💬 240</p>
+            </div>
+        </div>
+
+        <div class="short-card">
+            <div class="short-visual">🚀</div>
+            <div class="short-info">
+                <h3>Future की technology</h3>
+                <p>❤️ 15K · 💬 510</p>
+            </div>
+        </div>
+
+        <div class="short-card">
+            <div class="short-visual">🎮</div>
+            <div class="short-info">
+                <h3>Gaming का amazing trick</h3>
+                <p>❤️ 32K · 💬 1.2K</p>
+            </div>
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- GAMES -->
+
+<section class="section">
+
+    <div class="section-title">
+        <h2>🎮 Games</h2>
+        <span class="view-all">Play All →</span>
+    </div>
+
+    <div class="card-grid">
+
+        <div class="card">
+            <div class="card-image">🏎️</div>
+            <div class="card-body">
+                <h3>Speed Racing</h3>
+                <p>अपना high score बनाएं।</p>
+            </div>
+        </div>
+
+        <div class="card">
+            <div class="card-image">🧩</div>
+            <div class="card-body">
+                <h3>Brain Puzzle</h3>
+                <p>अपना दिमाग test करें।</p>
+            </div>
+        </div>
+
+        <div class="card">
+            <div class="card-image">🐍</div>
+            <div class="card-body">
+                <h3>Classic Snake</h3>
+                <p>Classic game फिर से खेलें।</p>
+            </div>
+        </div>
+
+        <div class="card">
+            <div class="card-image">🏆</div>
+            <div class="card-body">
+                <h3>Daily Quiz</h3>
+                <p>आज का challenge पूरा करें।</p>
+            </div>
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- TOOLS -->
+
+<section class="section">
+
+    <div class="section-title">
+        <h2>🛠️ Useful Tools</h2>
+        <span class="view-all">All Tools →</span>
+    </div>
+
+    <div class="tools-grid">
+
+        <div class="tool">
+            <div>🧮</div>
+            <span>Calculator</span>
+        </div>
+
+        <div class="tool">
+            <div>🔳</div>
+            <span>QR Generator</span>
+        </div>
+
+        <div class="tool">
+            <div>🔄</div>
+            <span>Converter</span>
+        </div>
+
+        <div class="tool">
+            <div>📝</div>
+            <span>Notes</span>
+        </div>
+
+        <div class="tool">
+            <div>📄</div>
+            <span>PDF Tools</span>
+        </div>
+
+        <div class="tool">
+            <div>🌤️</div>
+            <span>Weather</span>
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- FOOTER -->
+
+<footer class="footer">
+
+    <strong>NEXORA</strong>
+
+    <p style="margin-top:10px;">
+        AI • News • Shorts • Entertainment • Games • Tools
+    </p>
+
+    <p style="margin-top:15px;">
+        © 2026 NEXORA. All Rights Reserved.
+    </p>
+
+</footer>
+
+</main>
+
+
+<!-- MOBILE NAV -->
+
+<nav class="bottom-nav">
+
+<button class="active"
+
+onclick="window.scrollTo(0,0)">
+
+<span></span>
+
+Home
+
+</button>
+
+<button onclick="openSection('shorts')">
+
+<span></span>
+
+Shorts
+
+</button>
+
+<button onclick="openSection('ai')">
+
+<span></span>
+
+ΑΙ
+
+</button>
+
+<button onclick="openSection('news')">
+
+<span></span>
+
+News
+
+</button>
+
+<button onclick="alert('Profile system अगले चरण में जोड़ा जाएगा।')">
+
+<span></span>
+
+Profile
+
+</button>
+
+</nav>
+
+<script>
+
+/* ================= THEME ================= */
+
+function toggleTheme(){
+
+document.body.classList.toggle("light");
+
+const isLight =
+
+document.body.classList.contains("light");
+
+localStorage.setItem( "nexora-theme" isLight? "light": "dark"
+
+);
+
+}
+
+if(localStorage.getItem("nexora-theme") === "light"){
+
+}
+
+document.body.classList.add("light");
+
+}
+
+/* ================= SECTION NAVIGATION  ================= */
+
+function openSection(id) {
+
+const section = document.getElementById(id);
+
+if(section) {
+
+section.scrollIntoView({ behavior: "smooth", block: "start"
+
+});
+
+}
+
+}
+
+/* ================= SEARCH ================= */
+
+function searchSite(event){
+
+if(event && event.key !== "Enter"){
+
+return;
+
+}
+
+alert( "NEXORA Search\n\n" + "आपने search किया: " + value + "\n\nReal search engine अगले चरण में जोड़ा जाएगा।" );
+
+}
+
+
+/* ================= SIMPLE CARD INTERACTION ================= */
+
+document.querySelectorAll(".card").forEach(card => {
+
+card.addEventListener("click", () => {
+
+card.style.transform = "scale(.98)";
+
+setTimeout(() => {
+
+card.style.transform = "";
+
+},150);
+
+});
+
+});
+
+</script>
+
+</body>
+
+</html>
+
